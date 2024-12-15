@@ -26,12 +26,43 @@
         </div>
 
         <!-- Benefits Section -->
-        <div class="hero-section" style="background-color: rgba(0, 140, 140, 0.7); height: 105vh">
-            <div class="container has-text-centered">
-                <h2 class="title">Benefits of Using LinksMarket</h2>
-                <p>Discover how our platform can enhance your publishing and buying experience.</p>
+        <div class="hero-section" style="background-color: rgba(0, 140, 140, 0.7); height: 105vh;">
+            <div class="container">
+                <h2 class="title" style="margin-bottom: 10px;">Benefits of Using LinksMarket</h2>
+                <p class="subtitle" style="margin-bottom: 30px;">Discover how our platform can enhance your publishing and buying experience.</p>
+                
+                <div class="columns is-centered">
+                    <div class="column is-6">
+                        <div class="box has-background-light" style="display: flex; flex-direction: column; justify-content: flex-start;">
+                            <h3 class="subtitle">Bulk Uploading</h3>
+                            <p>Easily update multiple websites at once, saving you lots of time and effort.</p>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div class="box has-background-light" style="display: flex; flex-direction: column; justify-content: flex-start;">
+                            <h3 class="subtitle">Flexible Payment Options</h3>
+                            <p>Quickly switch payment accounts to ensure uninterrupted service.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="columns is-centered">
+                    <div class="column is-6">
+                        <div class="box has-background-light" style="display: flex; flex-direction: column; justify-content: flex-start;">
+                            <h3 class="subtitle">Manual SEO Metrics Entry</h3>
+                            <p>Maintain control over your SEO data until automated solutions are available.</p>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div class="box has-background-light" style="display: flex; flex-direction: column; justify-content: flex-start;">
+                            <h3 class="subtitle">Automated Notifications</h3>
+                            <p>Stay informed with automatic email notifications for task assignments and completions.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+           
 
         <!-- How to Use Section -->
         <div class="hero-section" style="background-color: rgba(0, 140, 140, 0.5);  height: 105vh">
