@@ -97,10 +97,37 @@
         </div>
 
         <!-- Why Choose Us Section -->
-        <div class="hero-section" style="background-color: rgba(0, 140, 140, 0.3);  height: 105vh">
+        <div class="hero-section" style="background-color: rgba(0, 140, 140, 0.3); height: 105vh; padding: 50px 0;">
             <div class="container has-text-centered">
                 <h2 class="title">Why Choose Us</h2>
-                <p>Learn why LinksMarket is the best choice for publishers and buyers alike.</p>
+                <p>Discover the unique offerings that make LinksMarket the best choice for publishers and buyers alike.</p>
+                <br />
+                <div class="columns is-multiline is-justify-content-space-between">
+                    <div class="column is-3">
+                        <div class="card has-shadow">
+                            <div class="card-content">
+                                <h3 class="subtitle">Performance Analytics</h3>
+                                <p>Detailed performance metrics, including impressions, views, orders, and sales percentages. This transparency allows publishers to gauge the effectiveness of their listings and optimize their strategies accordingly.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-3">
+                        <div class="card has-shadow">
+                            <div class="card-content">
+                                <h3 class="subtitle">Backlinks</h3>
+                                <p>Our backlinks process is straightforward and efficient. Publishers can enhance their SEO by providing their existing page URL and the promoted URL, making it a quick and easy option for boosting their online presence.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-3">
+                        <div class="card has-shadow">
+                            <div class="card-content">
+                                <h3 class="subtitle">Ranking System</h3>
+                                <p>We are considering implementing a ranking system that will provide indicators (+, -) to show whether a website's rank is improving or declining. This feature will help publishers understand their performance in the marketplace.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
