@@ -65,7 +65,7 @@
            
 
         <!-- How to Use Section -->
-        <div class="hero-section" style="background-color: rgba(0, 140, 140, 0.5); height: 105vh; padding: 50px 0;">
+        <div class="hero-section" style="background:  linear-gradient(to right, #00b3b3,rgb(47, 161, 161), #008c8c); height: 105vh; padding: 50px 0;">
             <div class="container has-text-centered">
             <h2 class="title">How to Use LinksMarket</h2>
             <p>Follow our simple steps to get started and maximize your benefits.</p>
@@ -97,7 +97,7 @@
         </div>
 
         <!-- Why Choose Us Section -->
-        <div class="hero-section" style="background-color: rgba(0, 140, 140, 0.3); height: 105vh; padding: 50px 0;">
+        <div class="hero-section" style="background: linear-gradient(45deg,rgb(170, 247, 247), #008c8c); height: 105vh; padding: 50px 0;">
             <div class="container has-text-centered">
                 <h2 class="title">Why Choose Us</h2>
                 <p>Discover the unique offerings that make LinksMarket the best choice for publishers and buyers alike.</p>
