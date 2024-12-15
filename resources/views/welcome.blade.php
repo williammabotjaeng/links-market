@@ -133,6 +133,6 @@
         </div>
     </main>
 
-    @include('components.footer') 
+    @include('components.welcome_footer') 
 </body>
 </html>

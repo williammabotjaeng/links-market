@@ -3,6 +3,7 @@
 @section('title', 'About Us')
 
 @section('content')
+    <br />
     <div class="container">
         <h1 class="title">About LinksMarket</h1>
         <p>
