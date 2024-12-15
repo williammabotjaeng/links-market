@@ -3,7 +3,7 @@
         <a class="navbar-item" href="{{ route('home') }}">
             <img src="{{ asset('Logo.png') }}" alt="LinksMarket Logo" style="max-height: 50px;">
         </a>
-        <button class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <button class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="toggleNavbar()">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
