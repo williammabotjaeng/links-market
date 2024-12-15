@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite(['resources/css/app.css', 'resources/js/app.js']) 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" /> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="shortcut icon" href="{{ asset('icon.png') }}" type="image/x-icon">
     <title>@yield('title', 'Where Publishers Meet Buyers—Effortlessly')</title>
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
     @include('components.header') 
@@ -16,5 +17,7 @@
     </main>
 
     @include('components.footer') 
+    <script src="../../js/app.js"></script>
+    <script src="../../js/bootstrap.js"></script>
 </body>
 </html>
