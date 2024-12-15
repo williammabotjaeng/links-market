@@ -26,10 +26,10 @@
         </div>
 
         <!-- Benefits Section -->
-        <div class="hero-section" style="background-color: rgba(0, 140, 140, 0.7); height: 105vh;">
+        <div class="hero-section" style="background: linear-gradient(to right, #008c8c, #005757); height: 105vh;">
             <div class="container">
-                <h2 class="title" style="margin-bottom: 10px;">Benefits of Using LinksMarket</h2>
-                <p class="subtitle" style="margin-bottom: 30px;">Discover how our platform can enhance your publishing and buying experience.</p>
+                <h2 class="title has-text-white" style="margin-bottom: 10px;">Benefits of Using LinksMarket</h2>
+                <p class="subtitle has-text-white" style="margin-bottom: 30px;">Discover how our platform can enhance your publishing and buying experience.</p>
                 
                 <div class="columns is-centered">
                     <div class="column is-6">
