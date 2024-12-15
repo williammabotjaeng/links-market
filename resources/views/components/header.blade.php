@@ -30,3 +30,14 @@
         </div>
     </div>
 </nav>
+<script>
+    function toggleNavbar() {
+        const navbarMenu = document.getElementById('navbarBasicExample');
+        const burgerButton = document.querySelector('.navbar-burger');
+
+    
+        navbarMenu.classList.toggle('is-active');
+        
+        burgerButton.classList.toggle('is-active');
+    }
+</script>

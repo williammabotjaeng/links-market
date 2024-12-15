@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" /> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <script src="js/app.js"></script>
     <link rel="shortcut icon" href="{{ asset('icon.png') }}" type="image/x-icon">
     <title>@yield('title', 'Where Publishers Meet Buyers—Effortlessly')</title>
     <link rel="stylesheet" href="css/app.css">
