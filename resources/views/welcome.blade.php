@@ -65,10 +65,34 @@
            
 
         <!-- How to Use Section -->
-        <div class="hero-section" style="background-color: rgba(0, 140, 140, 0.5);  height: 105vh">
+        <div class="hero-section" style="background-color: rgba(0, 140, 140, 0.5); height: 105vh; padding: 50px 0;">
             <div class="container has-text-centered">
-                <h2 class="title">How to Use LinksMarket</h2>
-                <p>Follow our simple steps to get started and maximize your benefits.</p>
+            <h2 class="title">How to Use LinksMarket</h2>
+            <p>Follow our simple steps to get started and maximize your benefits.</p>
+            <br>
+            <br>
+            <div class="columns is-centered">
+                <div class="column is-3">
+                    <div class="circle-number">1</div>
+                    <h3 class="subtitle">Order a Task</h3>
+                    <p>When a buyer orders a new task, they initiate the process.</p>
+                </div>
+            <div class="column is-3">
+                <div class="circle-number">2</div>
+                <h3 class="subtitle">Funds Held</h3>
+                <p>The funds are held in escrow until the task is completed and accepted.</p>
+            </div>
+            <div class="column is-3">
+                <div class="circle-number">3</div>
+                <h3 class="subtitle">Task Completion</h3>
+                <p>The publisher completes the task as per the buyer's requirements.</p>
+            </div>
+            <div class="column is-3">
+                <div class="circle-number">4</div>
+                <h3 class="subtitle">Release Funds</h3>
+                <p>Once the buyer accepts the task, the funds are released to the publisher.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
