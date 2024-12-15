@@ -1,17 +1,16 @@
-@extends('layouts.app')
+@extends('layouts.welcome')
 
 @section('title', 'Welcome to LinksMarket')
 
 @section('content')
-    <div class="container">
-        <h1 class="title">Welcome to LinksMarket!</h1>
-        <p class="subtitle">Where Publishers Meet Buyers—Effortlessly.</p>
-        <p>Explore our features and services tailored for publishers and buyers.</p>
-        <p>
-            <a class="button is-link" href="{{ route('about') }}">Learn more about us</a>
-            <a class="button is-info" href="{{ route('performance.index') }}">View Performance Analytics</a>
-            <a class="button is-success" href="{{ route('sponsored.index') }}">Check Sponsored Sites</a>
-            <a class="button is-warning" href="{{ route('link-insertions.index') }}">Explore Link Insertions</a>
-        </p>
+    <div>
+        <div class="is-centered has-text-centered is-justify-content-center is-align-content-center" style="background-color: rgba(0, 140, 140, 0.5); height: 100vh">
+            <div class="container has-text-centered">
+                <h1 class="title has-text-white">Welcome to LinksMarket!</h1>
+                <p class="subtitle has-text-white">Where Publishers Meet Buyers—Effortlessly.</p>
+                <p class="has-text-white">Explore our features and services tailored for publishers and buyers.</p>
+                <a class="button is-large is-light" href="{{ route('register') }}">Let's Get Started</a>
+            </div>
+        </div>
     </div>
 @endsection
