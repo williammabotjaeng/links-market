@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-    <link rel="shortcut icon" href="../../../public/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('Icon.png') }}" type="image/x-icon">
     <title>@yield('title', 'LinksMarket | Where Publishers Meet Buyers—Effortlessly')</title>
     <link rel="stylesheet" href="../../css/app.css">
 </head>
