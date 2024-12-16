@@ -24,9 +24,10 @@
             @else
                 <a class="navbar-item" href="{{ route('login') }}" style="color: #008C8C;">Login</a>
                 <a class="navbar-item" href="{{ route('register') }}" style="color: #008C8C;">Register</a>
+                <a class="navbar-item" href="{{ route('about') }}" style="color: #008C8C;">About</a>
+                <a class="navbar-item" href="{{ route('contact') }}" style="color: #008C8C;">Contact</a>
             @endauth
-            <a class="navbar-item" href="{{ route('about') }}" style="color: #008C8C;">About</a>
-            <a class="navbar-item" href="{{ route('contact') }}" style="color: #008C8C;">Contact</a>
+            
         </div>
     </div>
 </nav>
