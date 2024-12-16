@@ -15,6 +15,7 @@
         <p>
             Our mission is to create a seamless experience for both publishers and buyers. We offer various advertising options, including guest posts and link insertions, allowing for flexible marketing solutions tailored to individual needs.
         </p>
+        <br>
         <h2 class="subtitle">Why Choose Us?</h2>
         <ul>
             <li><strong>Performance Analytics</strong>: Get real-time insights into your website's performance.</li>
