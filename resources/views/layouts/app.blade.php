@@ -10,7 +10,7 @@
     <script src="js/app.js"></script>
     <title>@yield('title', 'Where Publishers Meet Buyers—Effortlessly')</title>
     <link rel="stylesheet" href="css/app.css">
-    <script>
+    <style>
         :root {
             --bulma-primary: #008c8c;
         }
@@ -30,7 +30,7 @@
             color: white !important;
             border-color: white !important;
         }
-    </script>
+    </style>
 </head>
 <body>
     @include('components.header') 
