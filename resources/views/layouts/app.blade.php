@@ -13,6 +13,7 @@
     <style>
         :root {
             --bulma-primary: #008c8c;
+            --bulma-danger: #ff4c4c;
         }
 
         .full-viewport {

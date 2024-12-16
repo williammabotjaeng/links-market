@@ -6,6 +6,11 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+// 404 Page
+Route::fallback(function () {
+    return response()->view('errors.404', [], 404);
+});
+
 // About Page
 Route::get('/about', function () {
     return view('about');
