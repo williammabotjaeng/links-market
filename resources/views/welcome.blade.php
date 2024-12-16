@@ -29,7 +29,7 @@
                     <p class="subtitle has-text-white">Where Publishers Meet Buyers—Effortlessly.</p>
                     <p>Explore our features and services tailored for publishers and buyers.</p>
                     <br>
-                    <a class="button is-large is-light border-transition" href="{{ route('register') }}">Let's Get Started</a>
+                    <a class="button is-large is-light border-transition" style="color: #008c8c" href="{{ route('register') }}">Let's Get Started</a>
                 </div>
             </div>
         </div>
