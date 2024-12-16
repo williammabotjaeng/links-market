@@ -21,7 +21,7 @@
                             </div>
                         </div>
                         <div class="column is-half">
-                            <form action="/api/register" method="POST">
+                            <form action="{{ route('register') }}" method="POST">
                                 @csrf
                                 <div class="field">
                                     <label class="label" for="name">Name</label>

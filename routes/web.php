@@ -1,5 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 // Welcome Page
 Route::get('/', function () {
@@ -19,11 +20,11 @@ Route::get('/about', function () {
 // Performance Analytics Page
 Route::get('/performance', function () {
     return view('performance.index', [
-        'impressions' => 1000, // Example data
-        'views' => 500,        // Example data
-        'orders' => 50,        // Example data
-        'salesPercentage' => 5, // Example data
-        'rankChange' => 2      // Example data for ranking
+        'impressions' => 1000, 
+        'views' => 500,        
+        'orders' => 50,        
+        'salesPercentage' => 5, 
+        'rankChange' => 2      
     ]);
 })->name('performance.index');
 
@@ -54,17 +55,41 @@ Route::get('/forgot', function () {
     return view('auth.forgot');
 })->name('forgot');
 
+Route::post('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+
 // Add routes for authenticated users
 Route::middleware(['auth'])->group(function () {
+
     Route::get('/dashboard', function () {
-        return view('dashboard'); // Create this view as needed
+        if (Auth::check()) {
+            return view('dashboard.index'); 
+        } else {
+            return redirect('/login')->withErrors(['email' => 'You must be logged in to access the dashboard.']);
+        }
     })->name('dashboard');
 
     Route::get('/profile', function () {
-        return view('profile');
+        return view('dashboard.profile');
     })->name('profile');
 
+    Route::get('/settings', function () {
+        return view('dashboard.settings');
+    })->name('settings');
+
+    Route::get('/reports', function () {
+        return view('dashboard.reports');
+    })->name('reports');
+
+    Route::get('/support', function () {
+        return view('dashboard.support');
+    })->name('support');
+
+    Route::get('/analytics', function () {
+        return view('dashboard.analytics');
+    })->name('analytics');
+
     Route::post('/logout', function () {
-        // Handle logout logic
+        Auth::logout();
     })->name('logout');
 });

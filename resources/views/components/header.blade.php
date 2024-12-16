@@ -19,7 +19,10 @@
                 <a class="navbar-item" href="{{ route('performance.index') }}" style="color: #008C8C;">Performance</a>
                 <a class="navbar-item" href="{{ route('sponsored.index') }}" style="color: #008C8C;">Sponsored Sites</a>
                 <a class="navbar-item" href="{{ route('link-insertions.index') }}" style="color: #008C8C;">Link Insertions</a>
-                <a class="navbar-item" href="{{ route('logout') }}" style="color: #008C8C;">Logout</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: inline;">
+                    @csrf
+                    <button type="submit" class="navbar-item" style="margin-top: 4px; color: #008C8C; background: none; border: none; cursor: pointer;">Logout</button>
+                </form>
             @else
                 <a class="navbar-item" href="{{ route('login') }}" style="color: #008C8C;">Login</a>
                 <a class="navbar-item" href="{{ route('register') }}" style="color: #008C8C;">Register</a>
