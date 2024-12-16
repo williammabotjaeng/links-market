@@ -19,6 +19,12 @@
         .navbar a:hover {
             background-color: rgba(0, 140, 140, 0.1) !important; 
         }
+
+        .button:hover {
+            background-color: rgba(0, 140, 140, 0.1) !important;
+            color: white !important;
+            border-color: white !important;
+        }
     </style>
 </head>
 <body>
