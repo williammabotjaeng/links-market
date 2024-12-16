@@ -9,6 +9,11 @@
     <script src="js/app.js"></script>
     <title>@yield('title', 'Where Publishers Meet Buyers—Effortlessly')</title>
     <link rel="stylesheet" href="css/app.css">
+    <script>
+        :root {
+            --bulma-primary: #008c8c;
+        }
+    </script>
 </head>
 <body>
     @include('components.header') 
