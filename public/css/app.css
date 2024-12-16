@@ -2,6 +2,10 @@
     font-family: 'Poppins';
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .hero-section {
     height: 90vh;
     position: relative;

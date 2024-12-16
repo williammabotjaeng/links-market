@@ -9,13 +9,20 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
     <title>@yield('title', 'LinksMarket | Where Publishers Meet Buyers—Effortlessly')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <style>
+        .full-viewport {
+            height: 100vh; 
+            width: 100vw;  
+            overflow: hidden; 
+        }
+    </style>
 </head>
 <body>
     @include('components.header') 
 
     <main>
         <!-- Welcome Section -->
-        <div class="hero-section" style="background-image: url('{{ asset('img/welcome-bg.jpg') }}'); background-size: cover;">
+        <div class="hero-section is-vcentered full-viewport" style="background-image: url('{{ asset('img/welcome-bg.jpg') }}'); background-size: cover;">
             <div class="overlay" style="background-color: rgba(0, 140, 140, 0.5);">
                 <div class="container has-text-centered">
                     <h1 class="title has-text-white">Welcome to LinksMarket!</h1>
@@ -28,7 +35,7 @@
         </div>
 
         <!-- Benefits Section -->
-        <div class="hero-section" style="background: linear-gradient(to right, #008c8c, #005757); height: 105vh;">
+        <div class="hero-section is-vcentered full-viewport" style="background: linear-gradient(to right, #008c8c, #005757); height: 105vh;">
             <div class="container">
                 <h2 class="title has-text-white" style="margin-bottom: 10px;">Benefits of Using LinksMarket</h2>
                 <p class="subtitle has-text-white" style="margin-bottom: 30px;">Discover how our platform can enhance your publishing and buying experience.</p>
@@ -67,7 +74,7 @@
            
 
         <!-- How to Use Section -->
-        <div class="hero-section" style="background:  linear-gradient(to right, #00b3b3,rgb(47, 161, 161), #008c8c); height: 105vh; padding: 50px 0;">
+        <div class="hero-section is-vcentered full-viewport" style="background:  linear-gradient(to right, #00b3b3,rgb(47, 161, 161), #008c8c); height: 105vh; padding: 50px 0;">
             <div class="container has-text-centered">
             <h2 class="title">How to Use LinksMarket</h2>
             <p>Follow our simple steps to get started and maximize your benefits.</p>
@@ -99,7 +106,7 @@
         </div>
 
         <!-- Why Choose Us Section -->
-        <div class="hero-section" style="background: linear-gradient(45deg,rgb(170, 247, 247), #008c8c); height: 105vh; padding: 50px 0;">
+        <div class="hero-section is-vcentered full-viewport" style="background: linear-gradient(45deg,rgb(170, 247, 247), #008c8c); height: 105vh; padding: 50px 0;">
             <div class="container has-text-centered">
                 <h2 class="title">Why Choose Us</h2>
                 <p>Discover the unique offerings that make LinksMarket the best choice for publishers and buyers alike.</p>
@@ -141,7 +148,8 @@
     </span>
 </button>
 <script>
-   
+
+    // Back to top button 
     const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
     window.onscroll = function () {
