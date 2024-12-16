@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-content">
                     <div class="columns">
-                        <div class="column is-half has-background-info has-text-white p-5" style="background: linear-gradient(to right, #00b3b3,rgb(47, 161, 161), #008c8c);; border-radius: 4px">
+                        <div class="column is-half has-background-info has-text-white p-5" style="background: linear-gradient(to right, #00b3b3,rgb(47, 161, 161), #008c8c); border-radius: 4px">
                             <h2 class="title has-text-white">Join Us Today!</h2>
                             <p>Create an account to grow your business exponentially. It's quick and easy!</p>
                             <br>
@@ -21,7 +21,7 @@
                             </div>
                         </div>
                         <div class="column is-half">
-                            <form action="{{ route('register') }}" method="POST">
+                            <form action="/api/register" method="POST">
                                 @csrf
                                 <div class="field">
                                     <label class="label" for="name">Name</label>
@@ -49,10 +49,19 @@
                                 </div>
                                 <div class="field">
                                     <div class="control">
-                                        <button type="submit" style="background: linear-gradient(to right, #00b3b3,rgb(47, 161, 161), #008c8c);; color: white" class="button is-primary">Register</button>
+                                        <button type="submit" style="background: linear-gradient(to right, #00b3b3,rgb(47, 161, 161), #008c8c); color: white" class="button is-primary">Register</button>
                                     </div>
                                 </div>
                             </form>
+                            @if ($errors->any())
+                                <div class="notification is-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                         </div>
                     </div>
                 </div>
