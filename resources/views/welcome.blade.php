@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="shortcut icon" href="{{ asset('Icon.png') }}" type="image/x-icon">
     <title>@yield('title', 'LinksMarket | Where Publishers Meet Buyers—Effortlessly')</title>
-    <link rel="stylesheet" href="../../css/app.css">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
     @include('components.header') 
