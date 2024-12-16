@@ -21,6 +21,18 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'paypal_email',
+        'phone_number',
+        'skype_id',
+        'whatsapp_number',
+        'website',
+        'bio',
+        'social_media_links',
+        'profile_picture',
+        'advertising_budget',
+        'preferred_ad_types',
+        'notification_methods',
+        'text_msg_opt_in',
     ];
 
     /**
