@@ -41,6 +41,10 @@ Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
 
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
 // Add routes for authenticated users
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
@@ -50,10 +54,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile', function () {
         return view('profile');
     })->name('profile');
-
-    Route::get('/contact', function () {
-        return view('contact');
-    })->name('contact');
 
     Route::post('/logout', function () {
         // Handle logout logic

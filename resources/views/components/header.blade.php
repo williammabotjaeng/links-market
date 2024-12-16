@@ -12,7 +12,6 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-            <!-- This section can remain empty or be used for additional items -->
         </div>
         <div class="navbar-end">
             @auth
