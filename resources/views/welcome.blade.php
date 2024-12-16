@@ -15,6 +15,10 @@
             width: 100vw;  
             overflow: hidden; 
         }
+
+        .navbar a:hover {
+            background-color: rgba(0, 140, 140, 0.1) !important; 
+        }
     </style>
 </head>
 <body>
