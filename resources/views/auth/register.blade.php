@@ -11,7 +11,7 @@
                     <div class="columns">
                         <div class="column is-half has-background-info has-text-white p-5" style="background: linear-gradient(to right, #00b3b3,rgb(47, 161, 161), #008c8c);; border-radius: 4px">
                             <h2 class="title has-text-white">Join Us Today!</h2>
-                            <p>Create an account to grow your business today. It's quick and easy!</p>
+                            <p>Create an account to grow your business exponentially. It's quick and easy!</p>
                             <br>
                             <br>
                             <br>
