@@ -31,14 +31,10 @@
         }
     </script>
 </head>
-<body>
-    @include('components.header') 
-
+<body style="background-image: url({{ asset('img/auth-bg.png') }}); background-size: cover">
     <main>
         @yield('content')
     </main>
-
-    @include('components.footer') 
     <script src="../../js/app.js"></script>
     <script src="../../js/bootstrap.js"></script>
 </body>
