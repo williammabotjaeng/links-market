@@ -45,6 +45,10 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+Route::get('/forgot', function () {
+    return view('forgot');
+})->name('forgot');
+
 // Add routes for authenticated users
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
