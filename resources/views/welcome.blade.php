@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="shortcut icon" href="{{ asset('Icon.png') }}" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
     <title>@yield('title', 'LinksMarket | Where Publishers Meet Buyers—Effortlessly')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
@@ -134,5 +135,26 @@
     </main>
 
     @include('components.welcome_footer') 
+    <button id="scrollToTopBtn" class="button is-primary is-rounded is-medium" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+    <span class="icon has-text-white">
+        <i class="fas fa-arrow-up"></i>
+    </span>
+</button>
+<script>
+   
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    window.onscroll = function () {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    scrollToTopBtn.onclick = function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+</script>
 </body>
 </html>
