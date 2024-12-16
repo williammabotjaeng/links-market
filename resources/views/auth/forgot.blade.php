@@ -11,7 +11,7 @@
                     <div class="columns">
                         <div class="column is-half has-background-info has-text-white p-5" style="background: linear-gradient(to right, #00b3b3, rgb(47, 161, 161), #008c8c); border-radius: 4px">
                             <h2 class="title has-text-white">Automated Notifications</h2>
-                            <p>Stay informed with automatic email notifications for task assignments and completions. Our system ensures that you never miss an important update, allowing you to focus on what matters most. Simply enter your email address below to receive notifications directly to your inbox.</p>
+                            <p>Stay informed with automatic email notifications for task assignments and completions. Our system ensures that you never miss an important update, allowing you to focus on what matters most.</p>
                             <br>
                             <br>
                             <br>
@@ -21,7 +21,7 @@
                             </div>
                         </div>
                         <div class="column is-half is-align-content-center">
-                            <form action="{{ route('password.email') }}" method="POST" class="has-text-centered">
+                            <form action="" method="POST" class="has-text-centered">
                                 @csrf
                                 <h3 class="title">Forgot Password</h3>
                                 <br>

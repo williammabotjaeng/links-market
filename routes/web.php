@@ -46,7 +46,7 @@ Route::get('/contact', function () {
 })->name('contact');
 
 Route::get('/forgot', function () {
-    return view('forgot');
+    return view('auth.forgot');
 })->name('forgot');
 
 // Add routes for authenticated users
