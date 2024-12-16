@@ -25,6 +25,13 @@
                                 @csrf
                                 <h3 class="title">Login</h3>
                                 <br>
+
+                                @if (request()->headers->get('referer') && strpos(request()->headers->get('referer'), route('register')) !== false)
+                                    <div class="notification is-success">
+                                        Registration successful! Please log in.
+                                    </div>
+                                @endif
+
                                 <div class="field">
                                     <label class="label" for="email">Email address</label>
                                     <div class="control">
