@@ -4,8 +4,7 @@
 
 @section('content')
 <div class="container is-fluid">
-    
-
+    <br>
     <h1 class="title">My Websites</h1>
 
     @if($websites->isEmpty())
@@ -36,8 +35,9 @@
                     <td>{{ $website->category }}</td>
                     <td>{{ $website->traffic }}</td>
                     <td>{{ $website->ad_space_available }}</td>
-                    <td>
-                        <a href="{{ route('websites.edit', $website->id) }}" class="button is-primary is-small">Edit</a>
+                    <td class="is-align-content-center is-justify-content-center">
+                        <a href="{{ route('websites.stepOneEdit', $website->id) }}" class="button is-primary is-small m-2">Edit</a>
+                        <br>
                         <form action="{{ route('websites.destroy', $website->id) }}" method="POST" style="display: inline;">
                             @csrf
                             @method('DELETE')

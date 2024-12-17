@@ -51,32 +51,98 @@ class AuthController extends Controller
         return redirect()->route('login')->with('success', 'Registration successful! Please log in.');
     }
 
+     /**
+     * Show the form for step one of editing a website.
+     */
+    public function editStepOne($id)
+    {
+        $website = Website::findOrFail($id);
+        return view('websites.edit_step_one', compact('website'));
+    }
+
+    /**
+     * Handle the first step form submission for editing.
+     */
+    public function stepOneEdit(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'url' => 'required|url',
+            'description' => 'required|string',
+        ]);
+
+        $website = Website::findOrFail($id);
+        $websiteData = $request->only(['name', 'url', 'description']);
+        return view('websites.edit_step_two', compact('website', 'websiteData'));
+    }  
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'url' => 'required|url',
+            'description' => 'required|string',
+            'category' => 'required|string|max:255',
+            'traffic' => 'required|integer',
+            'ad_space_available' => 'required|integer',
+        ]);
+
+        $website = Website::findOrFail($id);
+
+        if ($website->user_id !== Auth::id()) {
+            return redirect()->route('websites.index')->with('error', 'Unauthorized action.');
+        }
+
+        $website->name = $request->name;
+        $website->url = $request->url;
+        $website->description = $request->description;
+        $website->category = $request->category;
+        $website->traffic = $request->traffic;
+        $website->ad_space_available = $request->ad_space_available;
+
+        $website->save();
+
+        return redirect()->route('websites.index')->with('success', 'Website updated successfully!');
+    }
+
+    public function destroy($id)
+    {
+        $website = Website::findOrFail($id);
+
+        if ($website->user_id !== Auth::id()) {
+            return redirect()->route('websites.index')->with('error', 'Unauthorized action.');
+        }
+
+        $website->delete();
+
+        return redirect()->route('websites.index')->with('success', 'Website deleted successfully!');
+    }
+
     public function login(Request $request)
     {
-        // Validate the request
         $request->validate([
             'email' => 'required|email',
             'password' => 'required|min:6',
         ]);
 
-        // Attempt to find the user by email
+        
         $user = User::where('email', $request->input('email'))->first();
 
-        // Check if the user exists
+        
         if (!$user) {
             return redirect()->route('register')->withErrors([
                 'email' => 'You are not registered. Please register to create an account.',
             ]);
         }
 
-        // Check if the password is correct
+        
         if (Hash::check($request->input('password'), $user->password)) {
             Auth::login($user);
             $request->session()->regenerate();
             return redirect()->intended('dashboard')->with('success', 'Login successful!');
         }
 
-        // If credentials do not match
+       
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ]);

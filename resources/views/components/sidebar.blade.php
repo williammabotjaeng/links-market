@@ -25,7 +25,7 @@
             </li>
         @elseif($user->current_role === 'publisher')
             <li>
-                <a class="navbar-item has-text-white" href="{{ route('websites') }}" style="font-size: 1.25rem;">
+                <a class="navbar-item has-text-white" href="{{ route('websites.index') }}" style="font-size: 1.25rem;">
                     <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-globe"></i></span>
                     <span class="ml-4">My Websites</span>
                 </a>

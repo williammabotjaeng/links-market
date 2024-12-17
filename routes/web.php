@@ -119,4 +119,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/websites/create/step-two', [WebsiteController::class, 'createStepTwo'])->name('websites.createStepTwo');
     Route::post('/websites', [WebsiteController::class, 'store'])->name('websites.store');
     Route::get('/websites', [WebsiteController::class, 'index'])->name('websites.index');
+    Route::get('/websites/{id}/edit/step-one', [WebsiteController::class, 'editStepOne'])->name('websites.stepOneEdit');
+    Route::post('/websites/{id}/edit/step-one', [WebsiteController::class, 'stepOneEdit'])->name('websites.stepOneEdit.submit');
+    Route::get('/websites/{id}/edit/step-two', [WebsiteController::class, 'editStepTwo'])->name('websites.stepTwoEdit');
+    Route::put('/websites/{id}', [WebsiteController::class, 'update'])->name('websites.update');
+    Route::delete('/websites/{id}', [WebsiteController::class, 'destroy'])->name('websites.destroy');
 });
