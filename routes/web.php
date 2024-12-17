@@ -64,7 +64,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
         if (Auth::check()) {
             $user = Auth::user(); 
-            return view('dashboard.index', compact('user')); 
+            $projectsCount = 0; 
+            $websitesCount = 0; 
+            $backlinksCount = 0;
+            return view('dashboard.index', compact('user', 'projectsCount', 'websitesCount', 'backlinksCount')); 
         } else {
             return redirect('/login')->withErrors(['email' => 'You must be logged in to access the dashboard.']);
         }
@@ -73,6 +76,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile', function () {
         return view('dashboard.profile');
     })->name('profile');
+
+    Route::get('/websites', function () {
+        return view('dashboard.publisher.websites');
+    })->name('websites');
 
     Route::get('/settings', function () {
         return view('dashboard.settings');

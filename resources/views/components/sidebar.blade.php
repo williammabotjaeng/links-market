@@ -4,31 +4,42 @@
     </p>
     <ul class="menu-list side-nav">
         <li>
-            <a class="navbar-item has-text-white" href="dashboard" style="font-size: 1.25rem;">
+            <a class="navbar-item has-text-white" href="{{ route('dashboard') }}" style="font-size: 1.25rem;">
                 <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-tachometer-alt"></i></span>
                 <span class="ml-4">Dashboard</span>
             </a>
         </li>
+
+        @if($user->current_role === 'advertiser')
+            <li>
+                <a class="navbar-item has-text-white" href="{{ route('projects') }}" style="font-size: 1.25rem;">
+                    <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-folder-open"></i></span>
+                    <span class="ml-4">My Advertisements</span>
+                </a>
+            </li>
+            <li>
+                <a class="navbar-item has-text-white" href="{{ route('reports') }}" style="font-size: 1.25rem;">
+                    <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-file-alt"></i></span>
+                    <span class="ml-4">Ad Reports</span>
+                </a>
+            </li>
+        @elseif($user->current_role === 'publisher')
+            <li>
+                <a class="navbar-item has-text-white" href="{{ route('websites') }}" style="font-size: 1.25rem;">
+                    <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-globe"></i></span>
+                    <span class="ml-4">My Websites</span>
+                </a>
+            </li>
+            <li>
+                <a class="navbar-item has-text-white" href="{{ route('settings') }}" style="font-size: 1.25rem;">
+                    <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-cog"></i></span>
+                    <span class="ml-4">Settings</span>
+                </a>
+            </li>
+        @endif
+
         <li>
-            <a class="navbar-item has-text-white" href="projects" style="font-size: 1.25rem;">
-                <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-folder-open"></i></span>
-                <span class="ml-4">All My Projects</span>
-            </a>
-        </li>
-        <li>
-            <a class="navbar-item has-text-white" href="settings" style="font-size: 1.25rem;">
-                <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-cog"></i></span>
-                <span class="ml-4">Settings</span>
-            </a>
-        </li>
-        <li>
-            <a class="navbar-item has-text-white" href="reports" style="font-size: 1.25rem;">
-                <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-file-alt"></i></span>
-                <span class="ml-4">Reports</span>
-            </a>
-        </li>
-        <li>
-            <a class="navbar-item has-text-white" href="support" style="font-size: 1.25rem;">
+            <a class="navbar-item has-text-white" href="{{ route('support') }}" style="font-size: 1.25rem;">
                 <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-headset"></i></span>
                 <span class="ml-4">Support</span>
             </a>
