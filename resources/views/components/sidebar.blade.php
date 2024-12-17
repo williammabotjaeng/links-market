@@ -31,6 +31,12 @@
                 </a>
             </li>
             <li>
+                <a class="navbar-item has-text-white" href="{{ route('social-media') }}" style="font-size: 1.25rem;">
+                    <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-user-group"></i></span>
+                    <span class="ml-4">My Social Media</span>
+                </a>
+            </li>
+            <li>
                 <a class="navbar-item has-text-white" href="{{ route('settings') }}" style="font-size: 1.25rem;">
                     <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-cog"></i></span>
                     <span class="ml-4">Settings</span>
