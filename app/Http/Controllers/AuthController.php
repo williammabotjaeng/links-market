@@ -35,10 +35,9 @@ class AuthController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'roles' => $request->roles,
         ]);
 
-        // Attach roles to the user (assuming you have a roles relationship set up)
-        $user->roles()->attach($request->roles); 
 
         return redirect()->route('login')->with('success', 'Registration successful! Please log in.');
     }
