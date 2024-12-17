@@ -30,12 +30,21 @@ class AuthController extends Controller
             return redirect()->back()->with('error', 'Email already exists. Please use a different email.')->withInput(); // Flash message for existing email
         }
 
+        $current_role = "";
+
+        if ($request->roles == 'both') {
+            $current_role = "advertiser";
+        } else {
+            $current_role = $request->roles;
+        }
+
         // Create the user
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'roles' => $request->roles,
+            'current_role' => $current_role,
         ]);
 
 
@@ -50,18 +59,24 @@ class AuthController extends Controller
             'password' => 'required|min:6',
         ]);
 
+        // Attempt to find the user by email
         $user = User::where('email', $request->input('email'))->first();
 
-        
-        if ($user && Hash::check($request->input('password'), $user->password)) {
-            
+        // Check if the user exists
+        if (!$user) {
+            return redirect()->route('register')->withErrors([
+                'email' => 'You are not registered. Please register to create an account.',
+            ]);
+        }
+
+        // Check if the password is correct
+        if (Hash::check($request->input('password'), $user->password)) {
             Auth::login($user);
-
             $request->session()->regenerate();
-
             return redirect()->intended('dashboard')->with('success', 'Login successful!');
         }
 
+        // If credentials do not match
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ]);
