@@ -48,6 +48,18 @@
                                     </div>
                                 </div>
                                 <div class="field">
+                                    <label class="label" for="roles">Select Role</label>
+                                    <div class="control">
+                                        <div class="select">
+                                            <select id="roles" name="roles[]" multiple required>
+                                                <option value="buyer">Buyer</option>
+                                                <option value="publisher">Publisher</option>
+                                                <option value="both">Both</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field">
                                     <div class="control">
                                         <button type="submit" style="background: linear-gradient(to right, #00b3b3,rgb(47, 161, 161), #008c8c); color: white" class="button is-primary">Register</button>
                                     </div>
