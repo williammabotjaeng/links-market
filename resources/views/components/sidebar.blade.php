@@ -4,33 +4,33 @@
     </p>
     <ul class="menu-list side-nav">
         <li>
-            <a class="navbar-item has-text-white" href="dashboard" style="font-size: 1.5rem;">
+            <a class="navbar-item has-text-white" href="dashboard" style="font-size: 1.25rem;">
                 <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-tachometer-alt"></i></span>
-                <span>Dashboard</span>
+                <span class="ml-4">Dashboard</span>
             </a>
         </li>
         <li>
-            <a class="navbar-item has-text-white" href="projects" style="font-size: 1.5rem;">
+            <a class="navbar-item has-text-white" href="projects" style="font-size: 1.25rem;">
                 <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-folder-open"></i></span>
-                <span>All My Projects</span>
+                <span class="ml-4">All My Projects</span>
             </a>
         </li>
         <li>
-            <a class="navbar-item has-text-white" href="settings" style="font-size: 1.5rem;">
+            <a class="navbar-item has-text-white" href="settings" style="font-size: 1.25rem;">
                 <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-cog"></i></span>
-                <span>Settings</span>
+                <span class="ml-4">Settings</span>
             </a>
         </li>
         <li>
-            <a class="navbar-item has-text-white" href="reports" style="font-size: 1.5rem;">
+            <a class="navbar-item has-text-white" href="reports" style="font-size: 1.25rem;">
                 <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-file-alt"></i></span>
-                <span>Reports</span>
+                <span class="ml-4">Reports</span>
             </a>
         </li>
         <li>
-            <a class="navbar-item has-text-white" href="support" style="font-size: 1.5rem;">
+            <a class="navbar-item has-text-white" href="support" style="font-size: 1.25rem;">
                 <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-headset"></i></span>
-                <span>Support</span>
+                <span class="ml-4">Support</span>
             </a>
         </li>
     </ul>
