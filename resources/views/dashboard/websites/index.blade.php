@@ -5,13 +5,20 @@
 @section('content')
 <div class="container is-fluid">
     <br>
-    <h1 class="title">My Websites</h1>
+    <div class="is-flex is-justify-content-space-between mb-2">
+        <h1 class="title">My Websites</h1>
+        @if($websites->isEmpty())
+
+        @else
+        <a href="{{ route('websites.createStepOne') }}" class="button is-primary">Create a Website</a>
+        @endif
+    </div>
 
     @if($websites->isEmpty())
         <div class="notification is-warning">
             <h2 class="title is-4">No Websites Yet</h2>
             <p class="subtitle is-6">It looks like you haven't created any websites yet. Start by creating one!</p>
-            <a href="{{ route('websites.create') }}" class="button is-primary is-large">Create a Website</a>
+            <a href="{{ route('websites.createStepOne') }}" class="button is-primary is-large">Create a Website</a>
         </div>
     @else
         <table class="table is-striped is-hoverable is-fullwidth">

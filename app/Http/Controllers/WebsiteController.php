@@ -69,4 +69,17 @@ class WebsiteController extends Controller
 
         return redirect()->route('websites.index')->with('success', 'Website created successfully!');
     }
+
+    public function destroy($id)
+    {
+        $website = Website::findOrFail($id);
+
+        if ($website->user_id !== Auth::id()) {
+            return redirect()->route('websites.index')->with('error', 'Unauthorized action.');
+        }
+
+        $website->delete();
+
+        return redirect()->route('websites.index')->with('success', 'Website deleted successfully!');
+    }
 }
