@@ -61,6 +61,7 @@ Route::post('/login', [AuthController::class, 'login'])->name('login');
 // Add routes for authenticated users
 Route::middleware(['auth'])->group(function () {
 
+    // Dashboard routes
     Route::get('/dashboard', function () {
         if (Auth::check()) {
             $user = Auth::user(); 
@@ -105,8 +106,13 @@ Route::middleware(['auth'])->group(function () {
         return view('dashboard.analytics');
     })->name('analytics');
 
+    // Auth Routes
     Route::post('/logout', function () {
         Auth::logout();
         return redirect()->route('login');
     })->name('logout');
+
+    // Website Routes
+    Route::get('/websites/create', [WebsiteController::class, 'create'])->name('websites.create');
+    Route::post('/websites', [WebsiteController::class, 'store'])->name('websites.store');
 });
