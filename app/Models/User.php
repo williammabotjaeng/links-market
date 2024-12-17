@@ -33,6 +33,7 @@ class User extends Authenticatable
         'preferred_ad_types',
         'notification_methods',
         'text_msg_opt_in',
+        'roles'
     ];
 
     /**

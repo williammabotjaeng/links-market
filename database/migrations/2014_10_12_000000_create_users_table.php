@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('phone_number')->nullable();
             $table->string('skype_id')->nullable();
             $table->string('whatsapp_number')->nullable();
+            $table->string('roles')->nullable();
             $table->json('notification_methods')->nullable();
             $table->json('text_msg_opt_in')->nullable();
             $table->rememberToken();
