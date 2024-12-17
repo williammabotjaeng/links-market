@@ -26,36 +26,55 @@
                                 <div class="field">
                                     <label class="label" for="name">Name</label>
                                     <div class="control">
-                                        <input type="text" class="input" id="name" name="name" required>
+                                        <input type="text" class="input @error('name') is-danger @enderror" id="name" name="name" value="{{ old('name') }}" required>
                                     </div>
+                                    @error('name')
+                                        <p class="help is-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                                 <div class="field">
                                     <label class="label" for="email">Email address</label>
                                     <div class="control">
-                                        <input type="email" class="input" id="email" name="email" required>
+                                        <input type="email" class="input @error('email') is-danger @enderror" id="email" name="email" value="{{ old('email') }}" required>
                                     </div>
+                                    @error('email')
+                                        <p class="help is-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                                 <div class="field">
                                     <label class="label" for="password">Password</label>
                                     <div class="control">
-                                        <input type="password" class="input" id="password" name="password" required>
+                                        <input type="password" class="input @error('password') is-danger @enderror" id="password" name="password" required>
                                     </div>
+                                    @error('password')
+                                        <p class="help is-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                                 <div class="field">
                                     <label class="label" for="password_confirmation">Confirm Password</label>
                                     <div class="control">
-                                        <input type="password" class="input" id="password_confirmation" name="password_confirmation" required>
+                                        <input type="password" class="input @error('password_confirmation') is-danger @enderror" id="password_confirmation" name="password_confirmation" required>
                                     </div>
+                                    @error('password_confirmation')
+                                        <p class="help is-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                                 <div class="field">
-                                    <label class="label" for="roles">Select Role</label>
+                                    <label class="label">Select Role</label>
                                     <div class="control">
-                                        <div class="select">
-                                            <select id="roles" name="roles[]" multiple required>
-                                                <option value="buyer">Buyer</option>
-                                                <option value="publisher">Publisher</option>
-                                                <option value="both">Both</option>
-                                            </select>
+                                        <div class="field is-grouped is-grouped-multiline">
+                                            <label class="radio">
+                                                <input type="radio" name="roles" value="advertiser" required>
+                                                Advertiser
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="roles" value="publisher" required>
+                                                Publisher
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="roles" value="both" required>
+                                                Both
+                                            </label>
                                         </div>
                                     </div>
                                 </div>

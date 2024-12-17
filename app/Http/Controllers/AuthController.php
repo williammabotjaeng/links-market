@@ -17,17 +17,28 @@ class AuthController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
+            'roles' => 'required|string', 
+            'roles.*' => 'in:advertiser,publisher,both', 
         ]);
 
         if ($validator->fails()) {
-            return response()->json($validator->errors(), 422);
+            return redirect()->back()->withErrors($validator)->withInput(); 
         }
 
+        // Check if the email already exists
+        if (User::where('email', $request->email)->exists()) {
+            return redirect()->back()->with('error', 'Email already exists. Please use a different email.')->withInput(); // Flash message for existing email
+        }
+
+        // Create the user
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
+
+        // Attach roles to the user (assuming you have a roles relationship set up)
+        $user->roles()->attach($request->roles); 
 
         return redirect()->route('login')->with('success', 'Registration successful! Please log in.');
     }
