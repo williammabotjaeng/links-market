@@ -9,11 +9,36 @@ use Illuminate\Support\Facades\Auth;
 class WebsiteController extends Controller
 {
     /**
-     * Show the form for creating a new website.
+     * Show the form for step one of creating a new website.
      */
-    public function create()
+    public function createStepOne()
     {
-        return view('websites.create');
+        $user = Auth::user();
+        return view('dashboard.websites.create_step_one', compact('user'));
+    }
+
+    public function index()
+    {
+        $user = Auth::user();
+        $websites = Website::where('user_id', Auth::id())->get();
+        return view('dashboard.websites.index', compact('user', 'websites'));
+    }
+
+    /**
+     * Handle the first step form submission.
+     */
+    public function stepOne(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'url' => 'required|url',
+            'description' => 'required|string',
+        ]);
+
+        $user = Auth::user();
+
+        $websiteData = $request->only(['name', 'url', 'description']);
+        return view('dashboard.websites.create_step_two', compact('websiteData', 'user'));
     }
 
     /**
@@ -30,9 +55,8 @@ class WebsiteController extends Controller
             'ad_space_available' => 'required|integer',
         ]);
 
-        
         $website = new Website([
-            'user_id' => Auth::id(), 
+            'user_id' => Auth::id(),
             'name' => $request->name,
             'url' => $request->url,
             'description' => $request->description,
@@ -41,10 +65,8 @@ class WebsiteController extends Controller
             'ad_space_available' => $request->ad_space_available,
         ]);
 
-        
         $website->save();
 
-      
         return redirect()->route('websites.index')->with('success', 'Website created successfully!');
     }
 }

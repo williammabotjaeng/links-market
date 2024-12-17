@@ -4,6 +4,7 @@
 
 @section('content')
 <div class="container is-fluid">
+    <br>
     <h1 class="title">Create a New Website</h1>
 
     <form action="{{ route('websites.store') }}" method="POST">

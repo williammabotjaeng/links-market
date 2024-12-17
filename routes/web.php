@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\WebsiteController;
 
 // Welcome Page
 Route::get('/', function () {
@@ -113,6 +114,9 @@ Route::middleware(['auth'])->group(function () {
     })->name('logout');
 
     // Website Routes
-    Route::get('/websites/create', [WebsiteController::class, 'create'])->name('websites.create');
+    Route::get('/websites/create/step-one', [WebsiteController::class, 'createStepOne'])->name('websites.createStepOne');
+    Route::post('/websites/create/step-one', [WebsiteController::class, 'stepOne'])->name('websites.stepOne');
+    Route::get('/websites/create/step-two', [WebsiteController::class, 'createStepTwo'])->name('websites.createStepTwo');
     Route::post('/websites', [WebsiteController::class, 'store'])->name('websites.store');
+    Route::get('/websites', [WebsiteController::class, 'index'])->name('websites.index');
 });

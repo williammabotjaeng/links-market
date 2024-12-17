@@ -42,13 +42,13 @@
                 <div class="notification is-warning">
                     <h2 class="title is-4">No Projects Yet</h2>
                     <p class="subtitle is-6">It looks like you haven't created any projects. Start by creating one!</p>
-                    <a href="#" class="button is-primary is-large">Create a Project</a>
+                    <a href="{{ route('projects.create') }}" class="button is-primary is-large">Create a Project</a>
                 </div>
             @elseif($user->current_role === 'publisher' && $websitesCount == 0)
                 <div class="notification is-warning">
                     <h2 class="title is-4">No Websites Yet</h2>
                     <p class="subtitle is-6">It looks like you haven't created any websites. Start by creating one!</p>
-                    <a href="#" class="button is-primary is-large">Create a Website</a>
+                    <a href="{{ route('websites.createStepOne') }}" class="button is-primary is-large">Create a Website</a>
                 </div>
                 <br>
                 <div class="notification is-warning">
