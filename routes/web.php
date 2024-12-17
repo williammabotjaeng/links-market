@@ -63,7 +63,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/dashboard', function () {
         if (Auth::check()) {
-            return view('dashboard.index'); 
+            $user = Auth::user(); 
+            return view('dashboard.index', compact('user')); 
         } else {
             return redirect('/login')->withErrors(['email' => 'You must be logged in to access the dashboard.']);
         }
