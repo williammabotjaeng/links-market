@@ -81,6 +81,10 @@ Route::middleware(['auth'])->group(function () {
         return view('dashboard.publisher.websites');
     })->name('websites');
 
+    Route::get('/projects', function () {
+        return view('dashboard.publisher.projects');
+    })->name('projects');
+
     Route::get('/settings', function () {
         return view('dashboard.settings');
     })->name('settings');
