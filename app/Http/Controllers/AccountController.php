@@ -17,12 +17,12 @@ class AccountController extends Controller
     public function showReserved()
     {
         $account = Account::where('user_id', Auth::id())->first();
-        return view('dashboard.account.reserved', compact('account'));
+        return view('dashboard.accounts.reserved', compact('account'));
     }
 
     public function showBonus()
     {
         $account = Account::where('user_id', Auth::id())->first();
-        return view('dashboard.account.bonus', compact('account'));
+        return view('dashboard.accounts.bonus', compact('account'));
     }
 }
