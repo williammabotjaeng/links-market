@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Account;
 use App\Models\Website;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -21,6 +22,7 @@ class WebsiteController extends Controller
     {
         $user = Auth::user();
         $websites = Website::where('user_id', Auth::id())->get();
+        $account = Account::where('user_id', Auth::id())->first();
         return view('dashboard.websites.index', compact('user', 'websites'));
     }
 

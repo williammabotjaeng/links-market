@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\WebsiteController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\SettingsController;
 use App\Models\Account;
 
 // Welcome Page
@@ -141,4 +142,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/account/balance', [AccountController::class, 'showBalance'])->name('account.balance');
     Route::get('/account/reserved', [AccountController::class, 'showReserved'])->name('account.reserved');
     Route::get('/account/bonus', [AccountController::class, 'showBonus'])->name('account.bonus');
+
+    // Settings Routes
+    Route::get('/settings', [SettingsController::class, 'index'])->name('settings.index');
+    Route::post('/settings/update-account', [SettingsController::class, 'updateAccount'])->name('settings.updateAccount');
+    Route::post('/settings/update-contact', [SettingsController::class, 'updateContact'])->name('settings.updateContact');
+    Route::post('/settings/update-notifications', [SettingsController::class, 'updateNotifications'])->name('settings.updateNotifications');
+    Route::post('/settings/update-billing', [SettingsController::class, 'updateBilling'])->name('settings.updateBilling');
+    Route::post('/settings/update-tax-form', [SettingsController::class, 'updateTaxForm'])->name('settings.updateTaxForm');
 });

@@ -37,7 +37,7 @@
                 </a>
             </li>
             <li>
-                <a class="navbar-item has-text-white" href="{{ route('settings') }}" style="font-size: 1.25rem;">
+                <a class="navbar-item has-text-white" href="{{ route('settings.index') }}" style="font-size: 1.25rem;">
                     <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-cog"></i></span>
                     <span class="ml-4">Settings</span>
                 </a>
