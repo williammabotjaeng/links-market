@@ -124,4 +124,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/websites/{id}/edit/step-two', [WebsiteController::class, 'editStepTwo'])->name('websites.stepTwoEdit');
     Route::put('/websites/{id}', [WebsiteController::class, 'update'])->name('websites.update');
     Route::delete('/websites/{id}', [WebsiteController::class, 'destroy'])->name('websites.destroy');
+
+    // Tasks Routes
+    Route::get('/tasks', [TaskController::class, 'index'])->name('tasks.index');
+    Route::get('/tasks/create', [TaskController::class, 'create'])->name('tasks.create');
+    Route::post('/tasks', [TaskController::class, 'store'])->name('tasks.store');
+    Route::get('/tasks/{task}', [TaskController::class, 'show'])->name('tasks.show');
 });
