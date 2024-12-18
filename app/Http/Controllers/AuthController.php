@@ -4,12 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Account;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
+
+    public function showLoginForm(Request $request)
+    {
+        return view('auth.login');
+    }
+
+    public function showRegistrationForm(Request $request)
+    {
+        return view('auth.register');
+    }
+
     public function register(Request $request)
     {
        
@@ -53,60 +65,6 @@ class AuthController extends Controller
         ]);
 
         return redirect()->route('login')->with('success', 'Registration successful! Please log in.');
-    }
-
-     /**
-     * Show the form for step one of editing a website.
-     */
-    public function editStepOne($id)
-    {
-        $website = Website::findOrFail($id);
-        return view('websites.edit_step_one', compact('website'));
-    }
-
-    /**
-     * Handle the first step form submission for editing.
-     */
-    public function stepOneEdit(Request $request, $id)
-    {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'url' => 'required|url',
-            'description' => 'required|string',
-        ]);
-
-        $website = Website::findOrFail($id);
-        $websiteData = $request->only(['name', 'url', 'description']);
-        return view('websites.edit_step_two', compact('website', 'websiteData'));
-    }  
-
-    public function update(Request $request, $id)
-    {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'url' => 'required|url',
-            'description' => 'required|string',
-            'category' => 'required|string|max:255',
-            'traffic' => 'required|integer',
-            'ad_space_available' => 'required|integer',
-        ]);
-
-        $website = Website::findOrFail($id);
-
-        if ($website->user_id !== Auth::id()) {
-            return redirect()->route('websites.index')->with('error', 'Unauthorized action.');
-        }
-
-        $website->name = $request->name;
-        $website->url = $request->url;
-        $website->description = $request->description;
-        $website->category = $request->category;
-        $website->traffic = $request->traffic;
-        $website->ad_space_available = $request->ad_space_available;
-
-        $website->save();
-
-        return redirect()->route('websites.index')->with('success', 'Website updated successfully!');
     }
 
     public function login(Request $request)

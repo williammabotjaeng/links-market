@@ -15,6 +15,18 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [AuthController::class, 'login']);
+    
+    Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
+    Route::post('/register', [AuthController::class, 'register']);
+
+    Route::get('/forgot', function () {
+        return view('auth.forgot');
+    })->name('forgot');
+});
+
 // 404 Page
 Route::fallback(function () {
     return response()->view('errors.404', [], 404);
@@ -46,25 +58,9 @@ Route::get('/link-insertions', function () {
     return view('link-insertions.index');
 })->name('link-insertions.index');
 
-// Authentication Routes
-Route::get('/login', function () {
-    return view('auth.login');
-})->name('login');
-
-Route::get('/register', function () {
-    return view('auth.register');
-})->name('register');
-
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
-
-Route::get('/forgot', function () {
-    return view('auth.forgot');
-})->name('forgot');
-
-Route::post('/register', [AuthController::class, 'register'])->name('register');
-Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 // Add routes for authenticated users
 Route::middleware(['auth'])->group(function () {
