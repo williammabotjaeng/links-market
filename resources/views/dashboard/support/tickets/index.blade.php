@@ -32,8 +32,11 @@
                     <td>{{ ucfirst($ticket->priority) }}</td>
                     <td>{{ $ticket->created_at->format('Y-m-d H:i') }}</td>
                     <td>
-                        <a href="#" class="button is-small">View</a>
-                        <a href="#" class="button is-small is-danger">Delete</a>
+                        <form action="{{ route('tickets.destroy', $ticket->id) }}" method="POST" style="display: inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="button is-small is-danger">Delete</button>
+                        </form>
                     </td>
                 </tr>
             @endforeach
