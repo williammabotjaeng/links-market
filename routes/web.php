@@ -3,6 +3,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\WebsiteController;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\AccountController;
+use App\Models\Account;
 
 // Welcome Page
 Route::get('/', function () {
@@ -74,7 +76,14 @@ Route::middleware(['auth'])->group(function () {
             $projectsCount = 0; 
             $websitesCount = 0; 
             $backlinksCount = 0;
-            return view('dashboard.index', compact('user', 'projectsCount', 'websitesCount', 'backlinksCount')); 
+            $account = Account::where('user_id', Auth::id())->first();
+            return view('dashboard.index', compact(
+                'user', 
+                'projectsCount', 
+                'websitesCount', 
+                'backlinksCount',
+                'account'
+            )); 
         } else {
             return redirect('/login')->withErrors(['email' => 'You must be logged in to access the dashboard.']);
         }

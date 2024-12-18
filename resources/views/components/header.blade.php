@@ -17,15 +17,15 @@
             @auth
            
             <a class="navbar-item has-text-weight-bold" href="{{ route('account.balance') }}">
-                Balance: <span class="has-text-success">$0.00</span>
+                Balance: <span class="has-text-success">{{ $account->balance }}</span>
             </a>
         
             <a class="navbar-item has-text-weight-bold" href="{{ route('account.reserved') }}">
-                Reserved: <span class="has-text-warning">$0.00</span>
+                Reserved: <span class="has-text-warning">{{ $account->reserved }}</span>
             </a>
     
             <a class="navbar-item has-text-weight-bold" href="{{ route('account.bonus') }}">
-                Bonus: <span class="has-text-info">$0.00</span>
+                Bonus: <span class="has-text-info">{{ $account->bonus }}</span>
             </a>
       
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: inline; justify-content: center; align-items: center; padding: 10px; color: white; background-color: #008c8c">
