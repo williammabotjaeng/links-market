@@ -4,7 +4,7 @@
 <div class="container my-5">
     <div class="columns is-multiline">
         <div class="column is-half">
-            <div class="card has-background-info has-text-white">
+            <div class="card has-text-white" style="background-color: #008c8c">
                 <div class="card-content">
                     <h5 class="title is-5">Main balance</h5>
                     <p class="subtitle is-6">$0</p>
