@@ -8,7 +8,7 @@
     <h1 class="title m-4">Settings</h1>
 
     <div class="tabs" style="overflow: hidden">
-        <ul class="is-boxed" style="border-bottom: 2px solid #008c8c">
+        <ul class="is-boxed">
             <li class="is-active"><button type="button" href="#account-settings" data-tab="account-settings" onClick="activateTab('account-settings')">Account Settings</button></li>
             <li><button type="button" href="#contact-info" data-tab="contact-info" onClick="activateTab('contact-info')">Contact Info</button></li>
             <li><button type="button" href="#notification-settings" data-tab="notification-settings" onClick="activateTab('notification-settings')">Notification Settings</button></li>
