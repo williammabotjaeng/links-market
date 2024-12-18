@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Account;
 use App\Models\Ticket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -12,13 +13,15 @@ class TicketController extends Controller
     public function index()
     {
         $tickets = Ticket::with('user')->get(); 
-        return view('tickets.index', compact('tickets'));
+        $account = Account::where('user_id', Auth::id())->first();
+        return view('dashboard.support.tickets.index', compact('tickets', 'account'));
     }
 
     // Show the form for creating a new ticket
     public function create()
     {
-        return view('tickets.create');
+        $account = Account::where('user_id', Auth::id())->first();
+        return view('dashboard.support.tickets.create', compact('account'));
     }
 
     // Store a newly created ticket in storage
@@ -37,6 +40,6 @@ class TicketController extends Controller
             'priority' => $request->priority,
         ]);
 
-        return redirect()->route('tickets.index')->with('success', 'Ticket created successfully.');
+        return redirect()->route('dashboard.support.tickets.index')->with('success', 'Ticket created successfully.');
     }
 }
