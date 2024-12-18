@@ -64,9 +64,9 @@
         tab.addEventListener('click', function(e) {
             e.preventDefault();
             document.querySelectorAll('.tab').forEach(content => {
-                content.style.display = 'none'; // Hide all tabs
+                content.style.display = 'none'; 
             });
-            document.querySelector(`#${this.dataset.tab}`).style.display = 'block'; // Show the active tab
+            document.querySelector(`#${this.dataset.tab}`).style.display = 'block'; 
 
             document.querySelectorAll('.tabs li').forEach(li => {
                 li.classList.remove('is-active');

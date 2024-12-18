@@ -15,7 +15,8 @@ class WebsiteController extends Controller
     public function createStepOne()
     {
         $user = Auth::user();
-        return view('dashboard.websites.create_step_one', compact('user'));
+        $account = Account::where('user_id', Auth::id())->first();
+        return view('dashboard.websites.create_step_one', compact('user', 'account'));
     }
 
     public function index()
@@ -23,7 +24,7 @@ class WebsiteController extends Controller
         $user = Auth::user();
         $websites = Website::where('user_id', Auth::id())->get();
         $account = Account::where('user_id', Auth::id())->first();
-        return view('dashboard.websites.index', compact('user', 'websites'));
+        return view('dashboard.websites.index', compact('user', 'websites', 'account'));
     }
 
     /**
@@ -38,9 +39,9 @@ class WebsiteController extends Controller
         ]);
 
         $user = Auth::user();
-
+        $account = Account::where('user_id', Auth::id())->first();
         $websiteData = $request->only(['name', 'url', 'description']);
-        return view('dashboard.websites.create_step_two', compact('websiteData', 'user'));
+        return view('dashboard.websites.create_step_two', compact('websiteData', 'user', 'account'));
     }
 
     /**
