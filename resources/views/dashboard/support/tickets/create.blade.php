@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container is-fluid">
-    <h1 class="title">Create Support Ticket</h1>
+    <h1 class="title m-4">Create Support Ticket</h1>
 
     <form method="POST" action="{{ route('tickets.store') }}">
         @csrf

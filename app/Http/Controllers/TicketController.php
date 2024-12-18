@@ -12,16 +12,18 @@ class TicketController extends Controller
     // Display a listing of the tickets
     public function index()
     {
+        $user = Auth::user();
         $tickets = Ticket::with('user')->get(); 
         $account = Account::where('user_id', Auth::id())->first();
-        return view('dashboard.support.tickets.index', compact('tickets', 'account'));
+        return view('dashboard.support.tickets.index', compact('tickets', 'account', 'user'));
     }
 
     // Show the form for creating a new ticket
     public function create()
     {
+        $user = Auth::user();
         $account = Account::where('user_id', Auth::id())->first();
-        return view('dashboard.support.tickets.create', compact('account'));
+        return view('dashboard.support.tickets.create', compact('account', 'user'));
     }
 
     // Store a newly created ticket in storage

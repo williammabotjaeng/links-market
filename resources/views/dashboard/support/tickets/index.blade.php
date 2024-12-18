@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container is-fluid">
-    <h1 class="title">Support Tickets</h1>
+    <h1 class="title m-4">Support Tickets</h1>
 
     @if(session('success'))
         <div class="notification is-success">
