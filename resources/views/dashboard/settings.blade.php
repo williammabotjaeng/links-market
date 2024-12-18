@@ -207,6 +207,7 @@
             </table>
         </div>
     </div>
+    <p id="settingsmsg">This is the Settings page. You can change your information and preferences here.</p>
 </div>
 
 @endsection 
