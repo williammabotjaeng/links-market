@@ -2,6 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\WebsiteController;
+use App\Http\Controllers\TaskController;
 
 // Welcome Page
 Route::get('/', function () {
