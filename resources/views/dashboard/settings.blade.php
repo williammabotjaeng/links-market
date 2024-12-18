@@ -78,32 +78,32 @@
             <h2 class="subtitle">Notification Settings</h2>
             <form method="POST" action="{{ route('settings.updateNotifications') }}">
                 @csrf
-                <div class="field">
-                    <label class="label">I would like to receive the following letters:</label>
+                <div class="field p-2">
+                    <label class="label mb-4">I would like to receive the following letters:</label>
                     <div class="control">
-                        <label class="checkbox">
+                        <label class="checkbox label m-1">
                             <input type="checkbox" checked>
-                            Strictly necessary letters
+                            <strong>Strictly necessary letters</strong>
                         </label>
                         <p>Letters related to the email change, password change, email verification. You cannot unsubscribe from these letters.</p>
-                        <label class="checkbox">
+                        <label class="checkbox label m-1">
                             <input type="checkbox" checked>
-                            Essential letters
+                            <strong>Essential letters</strong>
                         </label>
                         <p>Letters about everything related to your tasks and orders. We highly recommend you to stay subscribed to these letters.</p>
-                        <label class="checkbox">
+                        <label class="checkbox label m-1">
                             <input type="checkbox">
-                            Helpful letters
+                            <strong>Helpful letters</strong>
                         </label>
                         <p>While not so important, these letters may still be of service to you.</p>
-                        <label class="checkbox">
+                        <label class="checkbox label m-1">
                             <input type="checkbox">
-                            Weekly updates
+                            <strong>Weekly updates</strong>
                         </label>
                         <p>Letters about new sites added to the inventory, sent weekly.</p>
-                        <label class="checkbox">
+                        <label class="checkbox label m-1">
                             <input type="checkbox">
-                            Receive text messages on my phone
+                            <strong>Receive text messages on my phone</strong>
                         </label>
                     </div>
                 </div>
