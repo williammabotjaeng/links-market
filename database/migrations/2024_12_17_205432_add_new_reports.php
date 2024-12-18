@@ -12,7 +12,6 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade'); 
             $table->foreignId('client_id')->nullable()->constrained()->onDelete('set null'); 
             $table->foreignId('project_id')->nullable()->constrained()->onDelete('set null'); 
-            $table->foreignId('social_media_id')->nullable()->constrained()->onDelete('set null');
             $table->foreignId('website_id')->nullable()->constrained()->onDelete('set null'); 
             $table->foreignId('backlink_id')->nullable()->constrained()->onDelete('set null'); 
             $table->foreignId('account_id')->nullable()->constrained()->onDelete('set null'); 

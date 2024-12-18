@@ -5,6 +5,10 @@ use App\Http\Controllers\WebsiteController;
 
 // Welcome Page
 Route::get('/', function () {
+    if (Auth::check())
+    {
+        return redirect('/dashboard');
+    }
     return view('welcome');
 })->name('home');
 

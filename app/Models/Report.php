@@ -12,17 +12,16 @@ class Report extends Model
 
     // Define the fillable attributes for mass assignment
     protected $fillable = [
-        'user_id',          // Foreign key for the user who created the report
-        'client_id',        // Foreign key for the associated client (nullable)
-        'project_id',       // Foreign key for the associated project (nullable)
-        'social_media_id',  // Foreign key for the associated social media account (nullable)
-        'website_id',       // Foreign key for the associated website (nullable)
-        'backlink_id',      // Foreign key for the associated backlink (nullable)
-        'account_id',       // Foreign key for the associated account (nullable)
-        'title',            // Title of the report
-        'content',          // Content of the report
-        'created_at',       // Timestamp for when the report was created
-        'updated_at',       // Timestamp for when the report was last updated
+        'user_id',          
+        'client_id',        
+        'project_id',       
+        'website_id',      
+        'backlink_id',      
+        'account_id',      
+        'title',           
+        'content',         
+        'created_at',       
+        'updated_at',     
     ];
 
     /**
@@ -47,14 +46,6 @@ class Report extends Model
     public function project(): BelongsTo
     {
         return $this->belongsTo(Project::class);
-    }
-
-    /**
-     * Get the social media account associated with the report.
-     */
-    public function socialMedia(): BelongsTo
-    {
-        return $this->belongsTo(SocialMedia::class);
     }
 
     /**
