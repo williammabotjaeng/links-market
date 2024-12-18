@@ -74,7 +74,6 @@ html {
     list-style: none;
     padding: 0;
     display: flex;
-    border-bottom: 2px solid #ccc;
 }
 
 .tabs li {
@@ -88,7 +87,6 @@ html {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s, color 0.3s, border-bottom 0.3s;
-    border-bottom: 2px solid transparent;
 }
 
 .tabs button:hover {
@@ -96,8 +94,8 @@ html {
 }
 
 .tabs li.is-active button {
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
+    color: #008c8c;
+    border-bottom: 2px solid #008c8c;
     font-weight: bold;
 }
 
