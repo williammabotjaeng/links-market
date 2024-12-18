@@ -10,11 +10,11 @@
     <!-- Tabs for Task Statuses -->
     <div class="tabs">
         <ul>
-            <li class="is-active"><a href="#all-tasks" data-tab="all-tasks">All Tasks</a></li>
-            <li><a href="#pending" data-tab="pending">Pending</a></li>
-            <li><a href="#in-progress" data-tab="in-progress">In Progress</a></li>
-            <li><a href="#completed" data-tab="completed">Completed</a></li>
-            <li><a href="#failed" data-tab="failed">Failed</a></li>
+            <li class="is-active"><button id="all-tasks-btn" type="button" data-tab="all-tasks" onClick="makeActiveTab('all-tasks')">All Tasks</button></li>
+            <li><button id="pending-btn" type="button" data-tab="pending" onClick="makeActiveTab('pending')">Pending</button></li>
+            <li><button id="in-progress-btn" type="button" data-tab="in-progress" onClick="makeActiveTab('in-progress')">In Progress</button></li>
+            <li><button id="completed-btn" type="button" data-tab="completed" onClick="makeActiveTab('completed')">Completed</button></li>
+            <li><button id="failed-btn" type="button" data-tab="failed" onClick="makeActiveTab('failed')">Failed</button></li>
         </ul>
     </div>
 
@@ -59,21 +59,7 @@
 
 @section('scripts')
 <script>
-    // Tab functionality
-    document.querySelectorAll('.tabs a').forEach(tab => {
-        tab.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelectorAll('.tab').forEach(content => {
-                content.style.display = 'none'; 
-            });
-            document.querySelector(`#${this.dataset.tab}`).style.display = 'block'; 
-
-            document.querySelectorAll('.tabs li').forEach(li => {
-                li.classList.remove('is-active');
-            });
-            this.parentElement.classList.add('is-active');
-        });
-    });
+ 
 </script>
 @endsection
 @endsection
