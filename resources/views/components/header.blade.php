@@ -12,7 +12,6 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-            <!-- This section can remain empty or be used for additional items -->
         </div>
         <div class="navbar-end">
             @auth
@@ -20,13 +19,28 @@
                 <a class="navbar-item" href="{{ route('performance.index') }}" style="color: #008C8C;">Performance</a>
                 <a class="navbar-item" href="{{ route('sponsored.index') }}" style="color: #008C8C;">Sponsored Sites</a>
                 <a class="navbar-item" href="{{ route('link-insertions.index') }}" style="color: #008C8C;">Link Insertions</a>
-                <a class="navbar-item" href="{{ route('logout') }}" style="color: #008C8C;">Logout</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: inline; justify-content: center; align-items: center; padding: 10px; color: white; background-color: #008c8c">
+                    @csrf
+                    <button type="submit" class="navbar-item" style="margin-top: 4px; color: #ffffff; background: none; border: none; cursor: pointer;">Logout</button>
+                </form>
             @else
                 <a class="navbar-item" href="{{ route('login') }}" style="color: #008C8C;">Login</a>
                 <a class="navbar-item" href="{{ route('register') }}" style="color: #008C8C;">Register</a>
+                <a class="navbar-item" href="{{ route('about') }}" style="color: #008C8C;">About</a>
+                <a class="navbar-item" href="{{ route('contact') }}" style="color: #008C8C;">Contact</a>
             @endauth
-            <a class="navbar-item" href="{{ route('about') }}" style="color: #008C8C;">About</a>
-            <a class="navbar-item" href="{{ route('contact') }}" style="color: #008C8C;">Contact</a>
+            
         </div>
     </div>
 </nav>
+<script>
+    function toggleNavbar() {
+        const navbarMenu = document.getElementById('navbarBasicExample');
+        const burgerButton = document.querySelector('.navbar-burger');
+
+    
+        navbarMenu.classList.toggle('is-active');
+        
+        burgerButton.classList.toggle('is-active');
+    }
+</script>
