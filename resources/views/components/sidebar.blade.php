@@ -12,9 +12,9 @@
 
         @if($user->current_role === 'advertiser')
             <li>
-                <a class="navbar-item has-text-white" href="{{ route('projects') }}" style="font-size: 1.25rem;">
+                <a class="navbar-item has-text-white" href="{{ route('projects.index') }}" style="font-size: 1.25rem;">
                     <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-folder-open"></i></span>
-                    <span class="ml-4">My Advertisements</span>
+                    <span class="ml-4">My Projects</span>
                 </a>
             </li>
             <li>
