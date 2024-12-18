@@ -16,7 +16,7 @@ class TaskController extends Controller
         $websitesCount = $tasks->where('product_type', 'website')->count();
         $backlinksCount = $tasks->where('status', 'completed')->count();
 
-        return view('dashboard.publisher.tasks.index', compact('user', 'projectsCount', 'websitesCount', 'backlinksCount'));
+        return view('dashboard.publisher.tasks.index', compact('user', 'projectsCount', 'websitesCount', 'backlinksCount', 'tasks'));
     }
 
     public function create()
