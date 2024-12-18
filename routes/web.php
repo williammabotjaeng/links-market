@@ -91,10 +91,6 @@ Route::middleware(['auth'])->group(function () {
         return view('dashboard.advertiser.projects');
     })->name('projects');
 
-    Route::get('/social-media', function () {
-        return view('dashboard.publisher.social-media');
-    })->name('social-media');
-
     Route::get('/settings', function () {
         return view('dashboard.settings');
     })->name('settings');
