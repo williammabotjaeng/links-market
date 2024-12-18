@@ -64,3 +64,51 @@ html {
     font-weight: bold;
     margin: 0 auto 10px;
 }
+
+
+.tabs {
+    margin-bottom: 20px;
+}
+
+.tabs ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    border-bottom: 2px solid #ccc;
+}
+
+.tabs li {
+    margin-right: 10px;
+}
+
+.tabs button {
+    background: transparent;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.tabs button:hover {
+    background-color: #f0f0f0;
+}
+
+.tabs li.is-active button {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    font-weight: bold;
+}
+
+.tab-content {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tab {
+    display: none;
+}
+
+.tab.is-active {
+    display: block;
+}
