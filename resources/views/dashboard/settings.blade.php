@@ -113,6 +113,7 @@
 
         <!-- Billing Details -->
         <div id="billing-details" class="tab">
+            <div class="column is-grouped-centered">
             <h2 class="subtitle">Billing Details</h2>
             <form method="POST" action="{{ route('settings.updateBilling') }}">
                 @csrf
@@ -128,37 +129,42 @@
                         <input class="input" type="text" placeholder="Enter your street address" required>
                     </div>
                 </div>
-                <div class="field">
-                    <label class="label">City / Town / Village *</label>
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Enter your city" required>
+                <div class="columns">
+                    <div class="column field">
+                        <label class="label">City / Town / Village *</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Enter your city" required>
+                        </div>
+                    </div>
+                    <div class="column field">
+                        <label class="label">State / Province / Region *</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Enter your state" required>
+                        </div>
                     </div>
                 </div>
-                <div class="field">
-                    <label class="label">State / Province / Region *</label>
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Enter your state" required>
+                <div class="columns">
+                    <div class="column field">
+                        <label class="label">Postal Code *</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Enter your postal code" required>
+                        </div>
                     </div>
-                </div>
-                <div class="field">
-                    <label class="label">Postal Code *</label>
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Enter your postal code" required>
-                    </div>
-                </div>
-                <div class="field">
-                    <label class="label">Country *</label>
-                    <div class="control">
-                        <select class="select" required>
-                            <option>Select country</option>
-                            <option>USA</option>
-                            <option>Canada</option>
-                            <option>UK</option>
-                            <!-- Add more countries as needed -->
-                        </select>
+                    <div class="column field">
+                        <label class="label">Country *</label>
+                        <div class="control is-align-content-center" >
+                            <select class="select is-rounded" style="padding: 8px;" required>
+                                <option>Select country</option>
+                                <option>USA</option>
+                                <option>Canada</option>
+                                <option>UK</option>
+                                <!-- Add more countries as needed -->
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <button type="submit" class="button is-primary">Save Changes</button>
+                </div>
             </form>
         </div>
 

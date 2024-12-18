@@ -111,3 +111,22 @@ html {
     display: block;
 }
 
+.select {
+    border: 2px solid #d5dbdb; 
+    border-radius: 8px; 
+    padding: 8px; 
+    background-color: white; 
+    font-size: 16px; 
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    cursor: pointer; 
+}
+
+/* Optional: Add a custom arrow */
+.select::after {
+    content: '▼'; 
+    position: absolute;
+    right: 10px; 
+    pointer-events: none; 
+}
