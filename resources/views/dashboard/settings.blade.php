@@ -4,17 +4,17 @@
 @section('title', 'Settings')
 
 @section('content')
-<div class="container is-fluid">
+<div class="container is-responsive">
     <h1 class="title m-4">Settings</h1>
 
     <div class="tabs is-boxed" style="overflow: hidden">
-        <ul class="tabs-menu">
-            <li class="is-active"><a href="#account-settings" data-tab="account-settings" onClick="activateTab('account-settings')">Account Settings</a></li>
-            <li><a href="#contact-info" data-tab="contact-info" onClick="activateTab('contact-info')">Contact Info</a></li>
-            <li><a href="#notification-settings" data-tab="notification-settings" onClick="activateTab('notification-settings')">Notification Settings</a></li>
-            <li><a href="#billing-details" data-tab="billing-details" onClick="activateTab('billing-details')">Billing Details</a></li>
-            <li><a href="#tax-form" data-tab="tax-form" onClick="activateTab('tax-form')">Tax Form</a></li>
-            <li><a href="#profile-activity" data-tab="profile-activity" onClick="activateTab('profile-activity')">Profile Activity</a></li>
+        <ul class="tabs-menu is-justify-content-center">
+            <li class="is-active"><button type="button" href="#account-settings" data-tab="account-settings" onClick="activateTab('account-settings')">Account Settings</button></li>
+            <li><button type="button" href="#contact-info" data-tab="contact-info" onClick="activateTab('contact-info')">Contact Info</button></li>
+            <li><button type="button" href="#notification-settings" data-tab="notification-settings" onClick="activateTab('notification-settings')">Notification Settings</button></li>
+            <li><button type="button" href="#billing-details" data-tab="billing-details" onClick="activateTab('billing-details')">Billing Details</button></li>
+            <li><button type="button" href="#tax-form" data-tab="tax-form" onClick="activateTab('tax-form')">Tax Form</button></li>
+            <li><button type="button" href="#profile-activity" data-tab="profile-activity" onClick="activateTab('profile-activity')">Profile Activity</button></li>
         </ul>
     </div>
 

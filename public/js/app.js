@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.tabs li').forEach(li => {
             li.classList.remove('is-active');
         });
-        const activeTabButton = Array.from(document.querySelectorAll('.tabs a')).find(link => link.getAttribute('data-tab') === tabId);
+        const activeTabButton = Array.from(document.querySelectorAll('.tabs button')).find(link => link.getAttribute('data-tab') === tabId);
         if (activeTabButton) {
             activeTabButton.parentElement.classList.add('is-active');
         }
