@@ -12,7 +12,7 @@ class AuthController extends Controller
 {
     public function register(Request $request)
     {
-        // Validate the request data
+       
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
@@ -25,20 +25,13 @@ class AuthController extends Controller
             return redirect()->back()->withErrors($validator)->withInput(); 
         }
 
-        // Check if the email already exists
         if (User::where('email', $request->email)->exists()) {
             return redirect()->back()->with('error', 'Email already exists. Please use a different email.')->withInput(); // Flash message for existing email
         }
 
-        $current_role = "";
+        $current_role = ($request->roles == 'both') ? "advertiser" : $request->roles;
 
-        if ($request->roles == 'both') {
-            $current_role = "advertiser";
-        } else {
-            $current_role = $request->roles;
-        }
 
-        // Create the user
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -47,6 +40,17 @@ class AuthController extends Controller
             'current_role' => $current_role,
         ]);
 
+        
+        Account::create([
+            'user_id' => $user->id,
+            'balance' => 0,
+            'bonus' => 0,
+            'reserved' => 0,
+            'escrow' => 0, 
+            'billing_address' => null, 
+            'payment_options' => [], 
+            'withdrawable_balance' => 0,
+        ]);
 
         return redirect()->route('login')->with('success', 'Registration successful! Please log in.');
     }
