@@ -198,7 +198,7 @@
         <!-- Profile Activity -->
         <div id="profile-activity" class="tab">
             <h2 class="subtitle">Profile Activity</h2>
-            <table class="table is-striped">
+            <table class="table is-striped container mr-4">
                 <thead>
                     <tr>
                         <th>Date</th>
