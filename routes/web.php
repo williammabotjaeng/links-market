@@ -150,4 +150,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/settings/update-notifications', [SettingsController::class, 'updateNotifications'])->name('settings.updateNotifications');
     Route::post('/settings/update-billing', [SettingsController::class, 'updateBilling'])->name('settings.updateBilling');
     Route::post('/settings/update-tax-form', [SettingsController::class, 'updateTaxForm'])->name('settings.updateTaxForm');
+
+    // Tickets Routes
+    Route::get('/tickets', [TicketController::class, 'index'])->name('tickets.index');
+    Route::get('/tickets/create', [TicketController::class, 'create'])->name('tickets.create');
+    Route::post('/tickets', [TicketController::class, 'store'])->name('tickets.store');
 });
