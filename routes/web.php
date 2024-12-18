@@ -131,4 +131,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/tasks/create', [TaskController::class, 'create'])->name('tasks.create');
     Route::post('/tasks', [TaskController::class, 'store'])->name('tasks.store');
     Route::get('/tasks/{task}', [TaskController::class, 'show'])->name('tasks.show');
+
+    // Account Routes
+    Route::get('/account/balance', [AccountController::class, 'showBalance'])->name('account.balance');
+    Route::get('/account/reserved', [AccountController::class, 'showReserved'])->name('account.reserved');
+    Route::get('/account/bonus', [AccountController::class, 'showBonus'])->name('account.bonus');
 });

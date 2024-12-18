@@ -15,14 +15,23 @@
         </div>
         <div class="navbar-end">
             @auth
-                <a class="navbar-item" href="{{ route('dashboard') }}" style="color: #008C8C;">Dashboard</a>
-                <a class="navbar-item" href="{{ route('performance.index') }}" style="color: #008C8C;">Performance</a>
-                <a class="navbar-item" href="{{ route('sponsored.index') }}" style="color: #008C8C;">Sponsored Sites</a>
-                <a class="navbar-item" href="{{ route('link-insertions.index') }}" style="color: #008C8C;">Link Insertions</a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: inline; justify-content: center; align-items: center; padding: 10px; color: white; background-color: #008c8c">
+           
+            <a class="navbar-item has-text-weight-bold" href="{{ route('account.balance') }}">
+                Balance: <span class="has-text-success">$0.00</span>
+            </a>
+        
+            <a class="navbar-item has-text-weight-bold" href="{{ route('account.reserved') }}">
+                Reserved: <span class="has-text-warning">$0.00</span>
+            </a>
+    
+            <a class="navbar-item has-text-weight-bold" href="{{ route('account.bonus') }}">
+                Bonus: <span class="has-text-info">$0.00</span>
+            </a>
+      
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: inline; justify-content: center; align-items: center; padding: 10px; color: white; background-color: #008c8c">
                     @csrf
                     <button type="submit" class="navbar-item" style="margin-top: 4px; color: #ffffff; background: none; border: none; cursor: pointer;">Logout</button>
-                </form>
+            </form>
             @else
                 <a class="navbar-item" href="{{ route('login') }}" style="color: #008C8C;">Login</a>
                 <a class="navbar-item" href="{{ route('register') }}" style="color: #008C8C;">Register</a>
