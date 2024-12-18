@@ -42,6 +42,6 @@ class TicketController extends Controller
             'priority' => $request->priority,
         ]);
 
-        return redirect()->route('dashboard.support.tickets.index')->with('success', 'Ticket created successfully.');
+        return redirect()->route('tickets.index')->with('success', 'Ticket created successfully.');
     }
 }
