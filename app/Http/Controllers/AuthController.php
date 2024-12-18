@@ -64,6 +64,15 @@ class AuthController extends Controller
             'withdrawable_balance' => 0,
         ]);
 
+        Settings::create([
+            'user_id' => $user->id,
+            'contact_info' => json_encode([]), 
+            'notification_settings' => json_encode([]), 
+            'billing_details' => json_encode([]), 
+            'tax_form' => null, 
+            'profile_activity' => json_encode([]), 
+        ]);
+
         return redirect()->route('login')->with('success', 'Registration successful! Please log in.');
     }
 
