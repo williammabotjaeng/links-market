@@ -17,22 +17,22 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Define the function in the global scope
+    
     window.makeActiveTab = function(tabId) {
-        // Hide all tabs
+        
         document.querySelectorAll('.tab').forEach(tab => {
             tab.style.display = 'none'; 
             tab.classList.remove('is-active');
         });
 
-        // Show the selected tab
+      
         const activeTab = document.getElementById(tabId);
         if (activeTab) {
             activeTab.style.display = 'block'; 
             activeTab.classList.add('is-active');
         }
 
-        // Update the active tab button
+     
         document.querySelectorAll('.tabs li').forEach(li => {
             li.classList.remove('is-active');
         });
@@ -42,6 +42,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // Initialize the first tab as active
+  
     makeActiveTab('all-tasks');
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    window.activateTab = function(tabId) {
+       
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.style.display = 'none'; 
+            tab.classList.remove('is-active');
+        });
+
+        const activeTab = document.getElementById(tabId);
+        if (activeTab) {
+            activeTab.style.display = 'block'; 
+            activeTab.classList.add('is-active');
+        }
+
+        document.querySelectorAll('.tabs li').forEach(li => {
+            li.classList.remove('is-active');
+        });
+        const activeTabButton = Array.from(document.querySelectorAll('.tabs a')).find(link => link.getAttribute('data-tab') === tabId);
+        if (activeTabButton) {
+            activeTabButton.parentElement.classList.add('is-active');
+        }
+    };
+
+    activateTab('account-settings');
 });
