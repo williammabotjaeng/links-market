@@ -5,6 +5,7 @@ use App\Http\Controllers\WebsiteController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\TicketController;
 use App\Models\Account;
 
 // Welcome Page

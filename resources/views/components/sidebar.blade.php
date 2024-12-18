@@ -45,7 +45,7 @@
         @endif
 
         <li>
-            <a class="navbar-item has-text-white" href="{{ route('support') }}" style="font-size: 1.25rem;">
+            <a class="navbar-item has-text-white" href="{{ route('tickets.index') }}" style="font-size: 1.25rem;">
                 <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-headset"></i></span>
                 <span class="ml-4">Support</span>
             </a>
