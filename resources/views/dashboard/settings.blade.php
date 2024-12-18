@@ -7,8 +7,8 @@
 <div class="container is-fluid">
     <h1 class="title m-4">Settings</h1>
 
-    <div class="tabs is-boxed">
-        <ul>
+    <div class="tabs is-boxed" style="overflow: hidden">
+        <ul class="tabs-menu">
             <li class="is-active"><a href="#account-settings" data-tab="account-settings" onClick="activateTab('account-settings')">Account Settings</a></li>
             <li><a href="#contact-info" data-tab="contact-info" onClick="activateTab('contact-info')">Contact Info</a></li>
             <li><a href="#notification-settings" data-tab="notification-settings" onClick="activateTab('notification-settings')">Notification Settings</a></li>
