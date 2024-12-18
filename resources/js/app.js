@@ -1,4 +1,3 @@
-import './bootstrap';
 
 // Navbar Navigation 
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,3 +16,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+

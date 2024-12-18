@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Account;
 use App\Models\Task;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,8 +16,16 @@ class TaskController extends Controller
         $projectsCount = $tasks->where('product_type', 'project')->count();
         $websitesCount = $tasks->where('product_type', 'website')->count();
         $backlinksCount = $tasks->where('status', 'completed')->count();
+        $account = Account::where('user_id', Auth::id())->first(); 
 
-        return view('dashboard.publisher.tasks.index', compact('user', 'projectsCount', 'websitesCount', 'backlinksCount', 'tasks'));
+        return view('dashboard.publisher.tasks.index', compact(
+            'user', 
+            'projectsCount', 
+            'websitesCount', 
+            'backlinksCount', 
+            'tasks',
+            'account'
+        ));
     }
 
     public function create()

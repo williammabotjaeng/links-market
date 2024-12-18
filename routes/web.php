@@ -3,6 +3,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\WebsiteController;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\AccountController;
+use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\TicketController;
+use App\Models\Account;
 
 // Welcome Page
 Route::get('/', function () {
@@ -12,6 +16,18 @@ Route::get('/', function () {
     }
     return view('welcome');
 })->name('home');
+
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [AuthController::class, 'login']);
+    
+    Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
+    Route::post('/register', [AuthController::class, 'register']);
+
+    Route::get('/forgot', function () {
+        return view('auth.forgot');
+    })->name('forgot');
+});
 
 // 404 Page
 Route::fallback(function () {
@@ -44,25 +60,9 @@ Route::get('/link-insertions', function () {
     return view('link-insertions.index');
 })->name('link-insertions.index');
 
-// Authentication Routes
-Route::get('/login', function () {
-    return view('auth.login');
-})->name('login');
-
-Route::get('/register', function () {
-    return view('auth.register');
-})->name('register');
-
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
-
-Route::get('/forgot', function () {
-    return view('auth.forgot');
-})->name('forgot');
-
-Route::post('/register', [AuthController::class, 'register'])->name('register');
-Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 // Add routes for authenticated users
 Route::middleware(['auth'])->group(function () {
@@ -74,7 +74,14 @@ Route::middleware(['auth'])->group(function () {
             $projectsCount = 0; 
             $websitesCount = 0; 
             $backlinksCount = 0;
-            return view('dashboard.index', compact('user', 'projectsCount', 'websitesCount', 'backlinksCount')); 
+            $account = Account::where('user_id', Auth::id())->first();
+            return view('dashboard.index', compact(
+                'user', 
+                'projectsCount', 
+                'websitesCount', 
+                'backlinksCount',
+                'account'
+            )); 
         } else {
             return redirect('/login')->withErrors(['email' => 'You must be logged in to access the dashboard.']);
         }
@@ -131,4 +138,23 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/tasks/create', [TaskController::class, 'create'])->name('tasks.create');
     Route::post('/tasks', [TaskController::class, 'store'])->name('tasks.store');
     Route::get('/tasks/{task}', [TaskController::class, 'show'])->name('tasks.show');
+
+    // Account Routes
+    Route::get('/account/balance', [AccountController::class, 'showBalance'])->name('account.balance');
+    Route::get('/account/reserved', [AccountController::class, 'showReserved'])->name('account.reserved');
+    Route::get('/account/bonus', [AccountController::class, 'showBonus'])->name('account.bonus');
+
+    // Settings Routes
+    Route::get('/settings', [SettingsController::class, 'index'])->name('settings.index');
+    Route::post('/settings/update-account', [SettingsController::class, 'updateAccount'])->name('settings.updateAccount');
+    Route::post('/settings/update-contact', [SettingsController::class, 'updateContact'])->name('settings.updateContact');
+    Route::post('/settings/update-notifications', [SettingsController::class, 'updateNotifications'])->name('settings.updateNotifications');
+    Route::post('/settings/update-billing', [SettingsController::class, 'updateBilling'])->name('settings.updateBilling');
+    Route::post('/settings/update-tax-form', [SettingsController::class, 'updateTaxForm'])->name('settings.updateTaxForm');
+
+    // Tickets Routes
+    Route::get('/tickets', [TicketController::class, 'index'])->name('tickets.index');
+    Route::get('/tickets/create', [TicketController::class, 'create'])->name('tickets.create');
+    Route::post('/tickets', [TicketController::class, 'store'])->name('tickets.store');
+    Route::delete('/tickets/{ticket}', [TicketController::class, 'destroy'])->name('tickets.destroy');
 });

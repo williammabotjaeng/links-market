@@ -64,3 +64,69 @@ html {
     font-weight: bold;
     margin: 0 auto 10px;
 }
+
+
+.tabs {
+    margin-bottom: 20px;
+}
+
+.tabs ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.tabs li {
+    margin-right: 10px;
+}
+
+.tabs button {
+    background: transparent;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s, border-bottom 0.3s;
+}
+
+.tabs button:hover {
+    background-color: #f0f0f0;
+}
+
+.tabs li.is-active button {
+    color: #008c8c;
+    border-bottom: 2px solid #008c8c;
+    font-weight: bold;
+}
+
+.tab-content {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tab {
+    display: none;
+}
+
+.tab.is-active {
+    display: block;
+}
+
+.select {
+    border: 2px solid #d5dbdb; 
+    border-radius: 8px; 
+    padding: 8px; 
+    background-color: white; 
+    font-size: 16px; 
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    cursor: pointer; 
+}
+
+/* Optional: Add a custom arrow */
+.select::after {
+    content: '▼'; 
+    position: absolute;
+    right: 10px; 
+    pointer-events: none; 
+}
