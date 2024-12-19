@@ -45,23 +45,24 @@
                 </div>
             </div>
         </div>
+        
         <!-- Benefits Section -->
         <div class="hero-section is-vcentered full-viewport" style="background: linear-gradient(to right, #008c8c, #005757); height: 105vh;">
             <div class="container">
-                <h2 class="title has-text-white" style="margin-bottom: 10px;">Benefits of Using LinksMarket</h2>
-                <p class="subtitle has-text-white" style="margin-bottom: 30px;">Discover how our platform can enhance your publishing and buying experience.</p>
+                <h2 class="title has-text-white" style="margin-bottom: 10px;">Why Party16Bars?</h2>
+                <p class="subtitle has-text-white" style="margin-bottom: 30px;">We make it easy for influencers like YOU to cash in on your socials.</p>
                 
                 <div class="columns is-centered">
                     <div class="column is-6">
                         <div class="box has-background-light" style="display: flex; flex-direction: column; justify-content: flex-start;">
-                            <h3 class="subtitle">Bulk Uploading</h3>
-                            <p>Easily update multiple websites at once, saving you lots of time and effort.</p>
+                            <h3 class="subtitle">Bulk Posting</h3>
+                            <p>Let’s save time. Push content across channels and keep things rolling like a pro.</p>
                         </div>
                     </div>
                     <div class="column is-6">
                         <div class="box has-background-light" style="display: flex; flex-direction: column; justify-content: flex-start;">
-                            <h3 class="subtitle">Flexible Payment Options</h3>
-                            <p>Quickly switch payment accounts to ensure uninterrupted service.</p>
+                            <h3 class="subtitle">Instant Payouts</h3>
+                            <p>Get paid FAST. No more waiting weeks for your hard-earned cash. Get paid through Paypal, Payoneer or Bank Account.</p>
                         </div>
                     </div>
                 </div>
@@ -69,14 +70,14 @@
                 <div class="columns is-centered">
                     <div class="column is-6">
                         <div class="box has-background-light" style="display: flex; flex-direction: column; justify-content: flex-start;">
-                            <h3 class="subtitle">Manual SEO Metrics Entry</h3>
-                            <p>Maintain control over your SEO data until automated solutions are available.</p>
+                            <h3 class="subtitle">Your Metrics, Your Rules</h3>
+                            <p>Keep control of your engagement stats. We keep it simple and authentic.</p>
                         </div>
                     </div>
                     <div class="column is-6">
                         <div class="box has-background-light" style="display: flex; flex-direction: column; justify-content: flex-start;">
-                            <h3 class="subtitle">Automated Notifications</h3>
-                            <p>Stay informed with automatic email notifications for task assignments and completions.</p>
+                            <h3 class="subtitle">Stay in the Loop</h3>
+                            <p>We ping you when brands are ready to roll so you never miss a bag.</p>
                         </div>
                     </div>
                 </div>
