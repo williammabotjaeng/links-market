@@ -6,37 +6,37 @@
                 <div class="column is-2">
                     <div class="box">
                         <h3 class="subtitle">Networking</h3>
-                        <p>Discover the extensive network of publishers and buyers.</p>
+                        <p>Connect with a vibrant community of influencers and brands.</p>
                     </div>
                 </div>
                 <div class="column is-2">
                     <div class="box">
-                        <h3 class="subtitle">collaborate</h3>
-                        <p>Enjoy seamless collaboration tools for effective communication.</p>
+                        <h3 class="subtitle">Collaborate</h3>
+                        <p>Seamless tools for collaboration that keep the creativity flowing.</p>
                     </div>
                 </div>
                 <div class="column is-2">
                     <div class="box">
                         <h3 class="subtitle">Analytics</h3>
-                        <p>Access detailed performance analytics to track your success.</p>
+                        <p>Get in-depth insights to track your performance and growth.</p>
                     </div>
                 </div>
                 <div class="column is-2">
                     <div class="box">
                         <h3 class="subtitle">Cost Saving</h3>
-                        <p>Utilize cost-effective solutions tailored for your needs.</p>
+                        <p>Smart solutions designed to maximize your earnings.</p>
                     </div>
                 </div>
                 <div class="column is-2">
                     <div class="box">
                         <h3 class="subtitle">Ranking System</h3>
-                        <p>Take advantage of our ranking system to boost visibility.</p>
+                        <p>Boost your visibility with our innovative ranking features.</p>
                     </div>
                 </div>
                 <div class="column is-2">
                     <div class="box">
                         <h3 class="subtitle">Premium</h3>
-                        <p>Explore sponsored site options for enhanced exposure.</p>
+                        <p>Unlock sponsored options for even greater exposure.</p>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@
     </section>
     <div class="divider" style="border-top: 2px solid #007575; margin: 20px 0;"></div>
     <div class="content has-text-left is-justify-content-space-between is-align-content-end" style="display: flex; flex-direction: row; margin: 16px">
-        <p>&nbsp;&nbsp;&nbsp;&copy; {{ date('Y') }} LinksMarket. All rights reserved.</p>
-        <p><strong>Head Office</strong><br />123 Broadway, <br /> Manhattan, <br />New York</p>
+        <p>&nbsp;&nbsp;&nbsp;&copy; {{ date('Y') }} Party16Bars. All rights reserved.</p>
+        <p><strong>Usually Around</strong><br />Sandton Library,<br />Sandton,<br />South Africa</p>
     </div>
 </footer>

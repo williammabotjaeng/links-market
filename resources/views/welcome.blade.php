@@ -120,31 +120,31 @@
         <!-- Why Choose Us Section -->
         <div class="hero-section is-vcentered full-viewport" style="background: linear-gradient(45deg,rgb(170, 247, 247), #008c8c); height: 105vh; padding: 50px 0;">
             <div class="container has-text-centered">
-                <h2 class="title">Why Choose Us</h2>
-                <p>Discover the unique offerings that make LinksMarket the best choice for publishers and buyers alike.</p>
+                <h2 class="title">Why Party16Bars Rocks</h2>
+                <p>Check out what makes us the ultimate choice for influencers and brands looking to collaborate.</p>
                 <br />
                 <div class="columns is-multiline is-justify-content-space-between">
                     <div class="column is-3">
                         <div class="card has-shadow">
                             <div class="card-content">
-                                <h3 class="subtitle">Performance Analytics</h3>
-                                <p>Detailed performance metrics, including impressions, views, orders, and sales percentages. This transparency allows publishers to gauge the effectiveness of their listings and optimize their strategies accordingly.</p>
+                                <h3 class="subtitle">Real-Time Insights</h3>
+                                <p>Get the lowdown on your performance with metrics that matter—views, clicks, and earnings. Stay in the loop and optimize your hustle!</p>
                             </div>
                         </div>
                     </div>
                     <div class="column is-3">
                         <div class="card has-shadow">
                             <div class="card-content">
-                                <h3 class="subtitle">Backlinks</h3>
-                                <p>Our backlinks process is straightforward and efficient. Publishers can enhance their SEO by providing their existing page URL and the promoted URL, making it a quick and easy option for boosting their online presence.</p>
+                                <h3 class="subtitle">Boost Your SEO</h3>
+                                <p>Our easy backlink process helps you level up your SEO game. Just drop your URL and watch your online presence soar!</p>
                             </div>
                         </div>
                     </div>
                     <div class="column is-3">
                         <div class="card has-shadow">
                             <div class="card-content">
-                                <h3 class="subtitle">Ranking System</h3>
-                                <p>We are considering implementing a ranking system that will provide indicators (+, -) to show whether a website's rank is improving or declining. This feature will help publishers understand their performance in the marketplace.</p>
+                                <h3 class="subtitle">Performance Ranking</h3>
+                                <p>Stay ahead of the game with our ranking system that shows you how you stack up. Get the feedback you need to keep climbing!</p>
                             </div>
                         </div>
                     </div>
