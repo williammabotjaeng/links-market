@@ -1,4 +1,4 @@
-<footer class="footer has-shadow" style="background-color: #008c8c; color: white; padding: 50px 0; height: 105vh">
+<footer class="footer has-shadow" style="background-color: #008c8c; color: white; padding: 50px 0; height: 105vh; width: 100vw">
     <section class="features-section" style="padding: 50px 0; background: linear-gradient(to right, #00b3b3,rgb(236, 255, 255));">
         <div class="container">
             <h2 class="title has-text-centered">Our Features</h2>

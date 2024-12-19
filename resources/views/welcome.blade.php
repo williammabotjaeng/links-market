@@ -155,10 +155,10 @@
 
     @include('components.welcome_footer') 
     <button id="scrollToTopBtn" class="button is-primary is-rounded is-medium" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
-    <span class="icon has-text-white">
-        <i class="fas fa-arrow-up"></i>
-    </span>
-</button>
+        <span class="icon has-text-white">
+            <i class="fas fa-arrow-up"></i>
+        </span>
+    </button>
 <script>
 
     // Back to top button 
