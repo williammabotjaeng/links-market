@@ -1,7 +1,8 @@
 <nav class="navbar has-shadow" role="navigation" aria-label="main navigation" style="background-color: rgba(220, 248, 248, 0.4); border-bottom: 1px dotted rgba(0, 140, 140, 0.5)">
     <div class="navbar-brand">
         <a class="navbar-item" href="{{ route('home') }}">
-            <img src="{{ asset('Logo.png') }}" alt="LinksMarket Logo" style="max-height: 50px;">
+            <img src="{{ asset('Logo.png') }}" alt="LinksMarket Logo" style="max-height: 50px;"> 
+            <span>Party16Bars</span>
         </a>
         <button class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="toggleNavbar()">
             <span aria-hidden="true"></span>

@@ -56,9 +56,9 @@ return array(
                 'mysql' => array(
                         'driver'    => 'mysql',
                         'host'      => 'localhost',
-                        'database'  => 'vmfptzufzj',
-                        'username'  => 'vmfptzufzj',
-                        'password'  => 'PZkheX4Jff',
+                        'database'  => 'ubfcvwtweu',
+                        'username'  => 'ubfcvwtweu',
+                        'password'  => '99YXvkxGQj',
                         'charset'   => 'utf8',
                         'collation' => 'utf8_unicode_ci',
                         'prefix'    => '',

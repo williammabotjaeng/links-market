@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="shortcut icon" href="{{ asset('Icon.png') }}" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
-    <title>@yield('title', 'LinksMarket | Where Publishers Meet Buyers—Effortlessly')</title>
+    <title>@yield('title', 'Party16Bars | You Party, Your Socials Work')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <style>
         .full-viewport {
