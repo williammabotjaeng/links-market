@@ -7,7 +7,7 @@
     <div class="container">
         <h1 class="title">About Party16Bars</h1>
         <p>
-            Party16Bars is where <strong>Influencers Connect with Brands—Effortlessly</strong>. Our platform is designed to bridge the gap between influencers and advertisers seeking innovative ways to promote their products and services.
+            Party16Bars is where <strong>Influencers Connect with Brands—Effortlessly</strong>. Our platform is designed to bridge the gap between Influencers and Brands seeking innovative ways to promote their products and services.
         </p>
         <p>
             With a focus on transparency and performance, Party16Bars empowers influencers by providing them with comprehensive analytics to track their engagement, including views, clicks, and earnings.

@@ -43,7 +43,7 @@
                     <a href="#" class="button is-light">Request Withdrawal</a>
                     <p class="mb-1">Do you want to make a security deposit?</p>
                     <a href="#" class="button is-light">Make Deposit</a>
-                    <p class="mb-1">Do you want to transfer funds to your buyer's balance?</p>
+                    <p class="mb-1">Do you want to transfer funds to your brand's balance?</p>
                     <a href="#" class="button is-light">Transfer Funds</a>
                 </div>
             </div>

@@ -8,7 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="{{ asset('Icon.png') }}" type="image/x-icon">
     <script src="js/app.js"></script>
-    <title>@yield('title', 'Where Publishers Meet Buyers—Effortlessly')</title>
+    <title>@yield('title', 'Where Infuencers Meet Brands, Effortlessly.')</title>
     <link rel="stylesheet" href="css/app.css">
     <style>
         :root {

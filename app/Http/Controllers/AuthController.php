@@ -31,7 +31,7 @@ class AuthController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
             'roles' => 'required|string', 
-            'roles.*' => 'in:advertiser,publisher,both', 
+            'roles.*' => 'in:brand,creator,both', 
         ]);
 
         if ($validator->fails()) {
@@ -42,7 +42,7 @@ class AuthController extends Controller
             return redirect()->back()->with('error', 'Email already exists. Please use a different email.')->withInput(); // Flash message for existing email
         }
 
-        $current_role = ($request->roles == 'both') ? "advertiser" : $request->roles;
+        $current_role = ($request->roles == 'both') ? "brand" : $request->roles;
 
 
         $user = User::create([

@@ -10,10 +10,7 @@
                 <div class="card-content">
                     <div class="columns">
                         <div class="column is-half has-background-info has-text-white p-5" style="background: linear-gradient(to right, #00b3b3, rgb(47, 161, 161), #008c8c); border-radius: 4px">
-                            <h2 class="title has-text-white">Understanding Backlinks</h2>
-                            <p>Backlinks are links from one website to another. They are crucial for SEO as they signal to search engines that your content is valuable and credible. The more quality backlinks you have, the better your site will rank in search results.</p>
-                            <br>
-                            <br>
+                        <h2 class="title has-text-white">Unlocking the Power of Connections</h2> <p>At Party16Bars, we understand that <sgrong>backlinks</strong> are more than just links; they are the bridges that connect influencers to brands.</p>
                             <br>
                             <br>
                             <div class="mt-4">

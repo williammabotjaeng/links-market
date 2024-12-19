@@ -48,7 +48,7 @@
                 <address>
                     <strong>Party16Bars</strong><br>
                     Maximum Earnings<br>
-                    Publisher Protection<br>
+                    Influencer Protection<br>
                     Easy to Get Started<br>
                 </address>
                 <br>

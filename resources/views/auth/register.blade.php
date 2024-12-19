@@ -10,8 +10,8 @@
                 <div class="card-content">
                     <div class="columns">
                         <div class="column is-half has-background-info has-text-white p-5" style="background: linear-gradient(to right, #00b3b3,rgb(47, 161, 161), #008c8c); border-radius: 4px">
-                            <h2 class="title has-text-white">Join Us Today!</h2>
-                            <p>Create an account to grow your business exponentially. It's quick and easy!</p>
+                        <h2 class="title has-text-white">Step Into the Spotlight!</h2>
+                            <p>Join the ultimate platform to showcase your talent, connect with brands or creators, and take your hustle to the next level. Signing up is fast, easy, and your first step to greatness!</p>
                             <br>
                             <br>
                             <br>
@@ -64,12 +64,12 @@
                                     <div class="control">
                                         <div class="field is-grouped is-grouped-multiline">
                                             <label class="radio">
-                                                <input type="radio" name="roles" value="advertiser" required>
-                                                Advertiser
+                                                <input type="radio" name="roles" value="brand" required>
+                                                Brand
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="roles" value="publisher" required>
-                                                Publisher
+                                                <input type="radio" name="roles" value="creator" required>
+                                                Creator
                                             </label>
                                             <label class="radio">
                                                 <input type="radio" name="roles" value="both" required>
