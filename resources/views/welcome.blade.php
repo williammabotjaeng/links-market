@@ -88,30 +88,30 @@
         <!-- How to Use Section -->
         <div class="hero-section is-vcentered full-viewport" style="background:  linear-gradient(to right, #00b3b3,rgb(47, 161, 161), #008c8c); height: 105vh; padding: 50px 0;">
             <div class="container has-text-centered">
-            <h2 class="title">How to Use LinksMarket</h2>
-            <p>Follow our simple steps to get started and maximize your benefits.</p>
-            <br>
-            <br>
-            <div class="columns is-centered">
-                <div class="column is-3">
-                    <div class="circle-number">1</div>
-                    <h3 class="subtitle">Order a Task</h3>
-                    <p>When a buyer orders a new task, they initiate the process.</p>
-                </div>
-            <div class="column is-3">
-                <div class="circle-number">2</div>
-                <h3 class="subtitle">Funds Held</h3>
-                <p>The funds are held in escrow until the task is completed and accepted.</p>
-            </div>
-            <div class="column is-3">
-                <div class="circle-number">3</div>
-                <h3 class="subtitle">Task Completion</h3>
-                <p>The publisher completes the task as per the buyer's requirements.</p>
-            </div>
-            <div class="column is-3">
-                <div class="circle-number">4</div>
-                <h3 class="subtitle">Release Funds</h3>
-                <p>Once the buyer accepts the task, the funds are released to the publisher.</p>
+                <h2 class="title">How to Use Party16Bars</h2>
+                <p>Follow these simple steps to kickstart your journey and cash in on your influence.</p>
+                <br>
+                <br>
+                <div class="columns is-centered">
+                    <div class="column is-3">
+                        <div class="circle-number">1</div>
+                        <h3 class="subtitle">Claim Your Gig</h3>
+                        <p>When a brand hits you up, it’s game time. Let’s get this party started!</p>
+                    </div>
+                    <div class="column is-3">
+                        <div class="circle-number">2</div>
+                        <h3 class="subtitle">Funds Secured</h3>
+                        <p>Your cash is locked in until you deliver the goods. No worries, just vibes.</p>
+                    </div>
+                    <div class="column is-3">
+                        <div class="circle-number">3</div>
+                        <h3 class="subtitle">Get It Done</h3>
+                        <p>Show off your skills and complete the task just how the brand wants it.</p>
+                    </div>
+                    <div class="column is-3">
+                        <div class="circle-number">4</div>
+                        <h3 class="subtitle">Cash Out</h3>
+                        <p>Once the brand gives you the thumbs up, the funds are yours. Easy peasy!</p>
                     </div>
                 </div>
             </div>

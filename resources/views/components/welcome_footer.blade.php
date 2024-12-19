@@ -44,7 +44,7 @@
     </section>
     <div class="divider" style="border-top: 2px solid #007575; margin: 20px 0;"></div>
     <div class="content has-text-left is-justify-content-space-between is-align-content-end" style="display: flex; flex-direction: row; margin: 16px">
-        <p>&copy; {{ date('Y') }} LinksMarket. All rights reserved.</p>
+        <p>&nbsp;&nbsp;&nbsp;&copy; {{ date('Y') }} LinksMarket. All rights reserved.</p>
         <p><strong>Head Office</strong><br />123 Broadway, <br /> Manhattan, <br />New York</p>
     </div>
 </footer>
