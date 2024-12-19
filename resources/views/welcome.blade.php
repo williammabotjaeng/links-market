@@ -32,11 +32,13 @@
 
     <main>
        <!-- Welcome Section -->
-        <div class="hero-section is-vcentered full-viewport" style="background-image: url('{{ asset('img/welcome-bg.jpg') }}'); background-size: cover;">
+        <div class="hero-section is-vcentered full-viewport" style="background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWlqc3UydWc2Z21wYXB1ZWpwYWV6b3JzZm5veHVhOWJnZHcwbXJ2byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l4FGoHktFE5InlFEA/giphy.gif'); background-size: cover;">
             <div class="overlay" style="background-color: rgba(0, 140, 140, 0.5);">
                 <div class="container has-text-centered">
                     <h1 class="title has-text-white">Welcome to Party16Bars!</h1>
+                    <br>
                     <p class="subtitle has-text-white">You Party, Your Socials Work.</p>
+                    <br>
                     <p>Turn your socials into a money machine. Let brands and sponsors come to YOU.</p>
                     <br>
                     <a class="button is-large is-light border-transition" style="color: #008c8c" href="{{ route('register') }}">Start the Party</a>
