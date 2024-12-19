@@ -128,7 +128,7 @@
                         <div class="card has-shadow">
                             <div class="card-content">
                                 <h3 class="subtitle">Real-Time Insights</h3>
-                                <p>Get the lowdown on your performance with metrics that matter—views, clicks, and earnings. Stay in the loop and optimize your hustle!</p>
+                                <p>Get data on your performance with metrics that matter. Stay in the loop and optimize your hustle!</p>
                             </div>
                         </div>
                     </div>
