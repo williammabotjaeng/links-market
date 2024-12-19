@@ -40,19 +40,19 @@
             </div>
 
             <div class="column is-half">
-                <h2 class="subtitle has-text-bold"><strong>Our Location</strong></h2>
+                <h2 class="subtitle has-text-bold"><strong>Our Values</strong></h2>
                 <p>
-                    You can also reach us at our office:
+                    You Party, Your Social Works
                 </p>
                 <br>
                 <address>
-                    <strong>LinksMarket</strong><br>
-                    123 Marketing Ave,<br>
-                    Suite 456,<br>
-                    City, State, ZIP<br>
+                    <strong>Party16Bars</strong><br>
+                    Maximum Earnings<br>
+                    Publisher Protection<br>
+                    Easy to Get Started<br>
                 </address>
                 <br>
-                <a href="mailto:info@linksmarket.com">info@linksmarket.com</a>
+                <a href="mailto:party16bars@hotmail.com">party16bars@hotmail.com</a>
             </div>
         </div>
     </div>
