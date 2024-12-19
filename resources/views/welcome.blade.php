@@ -31,19 +31,18 @@
     @include('components.header') 
 
     <main>
-        <!-- Welcome Section -->
+       <!-- Welcome Section -->
         <div class="hero-section is-vcentered full-viewport" style="background-image: url('{{ asset('img/welcome-bg.jpg') }}'); background-size: cover;">
             <div class="overlay" style="background-color: rgba(0, 140, 140, 0.5);">
                 <div class="container has-text-centered">
-                    <h1 class="title has-text-white">Welcome to LinksMarket!</h1>
-                    <p class="subtitle has-text-white">Where Publishers Meet Buyers—Effortlessly.</p>
-                    <p>Explore our features and services tailored for publishers and buyers.</p>
+                    <h1 class="title has-text-white">Welcome to Party16Bars!</h1>
+                    <p class="subtitle has-text-white">You Party, Your Socials Work.</p>
+                    <p>Turn your socials into a money machine. Let brands and sponsors come to YOU.</p>
                     <br>
-                    <a class="button is-large is-light border-transition" style="color: #008c8c" href="{{ route('register') }}">Let's Get Started</a>
+                    <a class="button is-large is-light border-transition" style="color: #008c8c" href="{{ route('register') }}">Start the Party</a>
                 </div>
             </div>
         </div>
-
         <!-- Benefits Section -->
         <div class="hero-section is-vcentered full-viewport" style="background: linear-gradient(to right, #008c8c, #005757); height: 105vh;">
             <div class="container">
