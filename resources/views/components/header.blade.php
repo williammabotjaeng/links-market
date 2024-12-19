@@ -1,5 +1,5 @@
 <nav class="navbar has-shadow" role="navigation" aria-label="main navigation" style="width: 100vw; background-color: rgba(220, 248, 248, 0.4); border-bottom: 1px dotted rgba(0, 140, 140, 0.5)">
-    <div class="navbar-brand">
+    <div class="navbar-brand" style="margin-left: 32px">
         <a class="navbar-item" href="{{ route('home') }}">
             <img src="{{ asset('Logo.png') }}" alt="LinksMarket Logo" style="max-height: 50px;"> 
             <span class="title" style="color:rgb(4, 95, 95)">Party16Bars</span>
@@ -14,7 +14,7 @@
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
         </div>
-        <div class="navbar-end">
+        <div class="navbar-end" style="margin-right: 32px">
             @auth
            
             <a class="navbar-item has-text-weight-bold" href="{{ route('account.balance') }}">

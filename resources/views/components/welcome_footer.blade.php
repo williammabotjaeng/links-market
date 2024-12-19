@@ -43,7 +43,7 @@
         </div>
     </section>
     <div class="divider" style="border-top: 2px solid #007575; margin: 20px 0;"></div>
-    <div class="content has-text-left is-justify-content-space-between is-align-content-end" style="display: flex; flex-direction: row; margin: 16px">
+    <div class="content has-text-left is-justify-content-space-between is-align-content-end" style="display: flex; flex-direction: row; margin: 32px">
         <p>&nbsp;&nbsp;&nbsp;&copy; {{ date('Y') }} Party16Bars. All rights reserved.</p>
         <p><strong>Usually Around</strong><br />Sandton Library,<br />Sandton,<br />South Africa</p>
     </div>
