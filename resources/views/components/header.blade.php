@@ -4,7 +4,7 @@
             <img src="{{ asset('Logo.png') }}" alt="LinksMarket Logo" style="max-height: 50px;"> 
             <span class="title" style="color:rgb(4, 95, 95)">Party16Bars</span>
         </a>
-        <button class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="toggleNavbar()">
+        <button class="navbar-burger" style="margin: 20px" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="toggleNavbar()">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>

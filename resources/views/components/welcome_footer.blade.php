@@ -12,7 +12,7 @@
                 <div class="column is-2">
                     <div class="box">
                         <h3 class="subtitle">Collaborate</h3>
-                        <p>Seamless tools for collaboration that keep the creativity flowing.</p>
+                        <p>Tools for collaboration that keep the creativity flowing.</p>
                     </div>
                 </div>
                 <div class="column is-2">
@@ -24,12 +24,12 @@
                 <div class="column is-2">
                     <div class="box">
                         <h3 class="subtitle">Cost Saving</h3>
-                        <p>Smart solutions designed to maximize your earnings.</p>
+                        <p>Smart solutions designed to maximize and grow your earnings.</p>
                     </div>
                 </div>
                 <div class="column is-2">
                     <div class="box">
-                        <h3 class="subtitle">Ranking System</h3>
+                        <h3 class="subtitle">Rankings</h3>
                         <p>Boost your visibility with our innovative ranking features.</p>
                     </div>
                 </div>
