@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Social;
+use App\Models\Account;
 use Illuminate\Http\Request;
 
 class SocialController extends Controller
@@ -11,13 +12,15 @@ class SocialController extends Controller
     public function index()
     {
         $socials = Social::all();
-        return view('socials.index', compact('socials'));
+        $account = Account::where('user_id', Auth::id())->first();
+        return view('dashboard.socials.index', compact('socials', 'account'));
     }
 
     // Show the form for creating a new social
     public function create()
     {
-        return view('socials.create');
+        $account = Account::where('user_id', Auth::id())->first();
+        return view('socials.create', compact('account'));
     }
 
     // Store a newly created social in storage
@@ -35,13 +38,15 @@ class SocialController extends Controller
     // Display the specified social
     public function show(Social $social)
     {
-        return view('socials.show', compact('social'));
+        $account = Account::where('user_id', Auth::id())->first();
+        return view('socials.show', compact('social', 'account'));
     }
 
     // Show the form for editing the specified social
     public function edit(Social $social)
     {
-        return view('socials.edit', compact('social'));
+        $account = Account::where('user_id', Auth::id())->first();
+        return view('socials.edit', compact('social', 'account'));
     }
 
     // Update the specified social in storage
@@ -53,6 +58,7 @@ class SocialController extends Controller
         ]);
 
         $social->update($request->all());
+        $account = Account::where('user_id', Auth::id())->first();
         return redirect()->route('socials.index')->with('success', 'Social account updated successfully.');
     }
 
