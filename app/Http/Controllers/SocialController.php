@@ -67,6 +67,15 @@ class SocialController extends Controller
         return redirect()->route('socials.index')->with('success', 'Social account updated successfully.');
     }
 
+    // Toggle Publish
+    public function togglePublish(Social $social)
+    {
+        $social->status = ($social->status == 'published') ? 'draft' : 'published';
+        $social->save();
+
+        return redirect()->route('socials.index')->with('success', 'Social account status updated successfully.');
+    }
+
     // Remove the specified social from storage
     public function destroy(Social $social)
     {

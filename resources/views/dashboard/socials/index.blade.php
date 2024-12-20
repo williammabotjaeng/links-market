@@ -29,6 +29,7 @@
                     <th>Likes</th>
                     <th>Posts</th>
                     <th>Engagement Rate</th>
+                    <th>Status</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -41,9 +42,18 @@
                     <td>{{ $social->likes }}</td>
                     <td>{{ $social->posts }}</td>
                     <td>{{ $social->engagement_rate }}%</td>
+                    <td>{{ ucfirst($social->status) }}</td>
                     <td class="is-align-content-center is-justify-content-center">
-                        <a href="{{ route('socials.edit', $social->id) }}" class="button is-primary is-small m-2">Edit</a>
+                        <a href="{{ route('socials.edit', $social->id) }}" class="button is-primary is-small">Edit</a>
                         <br>
+                        <br>
+                        <form action="{{ route('socials.togglePublish', $social->id) }}" method="POST" style="display: inline;">
+                            @csrf
+                            @method('PUT')
+                            <button type="submit" class="button {{ $social->status == 'published' ? 'is-warning' : 'is-success' }} is-small">
+                                {{ $social->status == 'published' ? 'Unpublish' : 'Publish' }}
+                            </button>
+                        </form>
                         <form action="{{ route('socials.destroy', $social->id) }}" method="POST" style="display: inline;">
                             @csrf
                             @method('DELETE')

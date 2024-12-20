@@ -175,4 +175,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/socials/{social}/edit', [SocialController::class, 'edit'])->name('socials.edit');
     Route::put('/socials/{social}', [SocialController::class, 'update'])->name('socials.update');
     Route::delete('/socials/{social}', [SocialController::class, 'destroy'])->name('socials.destroy');
+    Route::put('/socials/{social}/toggle-publish', [SocialController::class, 'togglePublish'])->name('socials.togglePublish');
 });
