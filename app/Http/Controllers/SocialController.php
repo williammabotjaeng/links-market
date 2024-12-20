@@ -23,7 +23,7 @@ class SocialController extends Controller
     {
         $user = Auth::user();
         $account = Account::where('user_id', Auth::id())->first();
-        return view('socials.create', compact('account', 'user'));
+        return view('dashboard.socials.create', compact('account', 'user'));
     }
 
     // Store a newly created social in storage
@@ -31,7 +31,7 @@ class SocialController extends Controller
     {
         $request->validate([
             'platform' => 'required|string|max:255',
-            'account_handle' => 'required|string|max:255',y
+            'account_handle' => 'required|string|max:255',
         ]);
 
         Social::create($request->all());
@@ -61,7 +61,7 @@ class SocialController extends Controller
             'platform' => 'required|string|max:255',
             'account_handle' => 'required|string|max:255',
         ]);
-        
+
         $social->update($request->all());
         $account = Account::where('user_id', Auth::id())->first();
         return redirect()->route('socials.index')->with('success', 'Social account updated successfully.');
