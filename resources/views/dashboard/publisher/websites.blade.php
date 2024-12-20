@@ -14,7 +14,7 @@
                             <h2 class="title is-4">Projects</h2>
                             <p class="subtitle is-1">{{ $projectsCount ?? 0 }}</p> <!-- Display project count -->
                         </div>
-                    @elseif($user->current_role === 'influencer')
+                    @elseif($user->current_role === 'creator')
                         <div class="column has-text-centered">
                             <h2 class="title is-4">Websites</h2>
                             <p class="subtitle is-1">{{ $websitesCount ?? 0 }}</p> <!-- Display website count -->
@@ -38,7 +38,7 @@
                     <p class="subtitle is-6">It looks like you haven't created any projects. Start by creating one!</p>
                     <a href="#" class="button is-primary is-large">Create a Project</a>
                 </div>
-            @elseif($user->current_role === 'influencer' && $websitesCount == 0)
+            @elseif($user->current_role === 'creator' && $websitesCount == 0)
                 <div class="notification is-warning">
                     <h2 class="title is-4">No Websites Yet</h2>
                     <p class="subtitle is-6">It looks like you haven't created any websites. Start by creating one!</p>

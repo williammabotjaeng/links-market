@@ -23,7 +23,13 @@
                     <span class="ml-4">Ad Reports</span>
                 </a>
             </li>
-        @elseif($user->current_role === 'influencer')
+        @elseif($user->current_role === 'creator')
+            <li>
+                <a class="navbar-item has-text-white" href="{{ route('socials.index') }}" style="font-size: 1.25rem;">
+                    <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-globe"></i></span>
+                    <span class="ml-4">My Socials</span>
+                </a>
+            </li>
             <li>
                 <a class="navbar-item has-text-white" href="{{ route('websites.index') }}" style="font-size: 1.25rem;">
                     <span class="icon" style="font-size: 1.5rem;"><i class="fas fa-globe"></i></span>

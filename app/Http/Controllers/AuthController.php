@@ -87,7 +87,6 @@ class AuthController extends Controller
         
         $user = User::where('email', $request->input('email'))->first();
 
-        
         if (!$user) {
             return redirect()->route('register')->withErrors([
                 'email' => 'You are not registered. Please register to create an account.',
