@@ -7,6 +7,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\SocialController;
 use App\Models\Account;
 
 // Welcome Page
@@ -164,4 +165,14 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/projects/{project}/edit', [ProjectController::class, 'edit'])->name('projects.edit');
     Route::put('/projects/{project}', [ProjectController::class, 'update'])->name('projects.update');
     Route::delete('/projects/{project}', [ProjectController::class, 'destroy'])->name('projects.destroy');
+
+    // Social Routes
+
+    Route::get('/socials', [SocialController::class, 'index'])->name('socials.index');
+    Route::get('/socials/create', [SocialController::class, 'create'])->name('socials.create');
+    Route::post('/socials', [SocialController::class, 'store'])->name('socials.store');
+    Route::get('/socials/{social}', [SocialController::class, 'show'])->name('socials.show');
+    Route::get('/socials/{social}/edit', [SocialController::class, 'edit'])->name('socials.edit');
+    Route::put('/socials/{social}', [SocialController::class, 'update'])->name('socials.update');
+    Route::delete('/socials/{social}', [SocialController::class, 'destroy'])->name('socials.destroy');
 });
