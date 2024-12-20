@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Models;
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-
-class Social extends Model
+return new class extends Migration
 {
-    use HasFactory;
 
     protected $fillable = [
         'platform',
@@ -34,6 +32,6 @@ class Social extends Model
         'engagement_by_post_type',
         'tweet_activity', 
         'post_activity',
-        'status',
+        'status', 
     ];
-}
+};

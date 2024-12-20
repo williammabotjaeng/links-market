@@ -28,7 +28,6 @@
                     <th>Followers</th>
                     <th>Likes</th>
                     <th>Posts</th>
-                    <th>Engagement Rate</th>
                     <th>Status</th>
                     <th>Actions</th>
                 </tr>
@@ -41,7 +40,6 @@
                     <td>{{ $social->followers }}</td>
                     <td>{{ $social->likes }}</td>
                     <td>{{ $social->posts }}</td>
-                    <td>{{ $social->engagement_rate }}%</td>
                     <td>{{ ucfirst($social->status) }}</td>
                     <td class="is-align-content-center is-justify-content-center">
                         <a href="{{ route('socials.edit', $social->id) }}" class="button is-primary is-small">Edit</a>
